@@ -159,6 +159,10 @@ como bluff location coordinates
 
 * https://tympanus.net/codrops/2015/12/16/animated-map-path-for-interactive-storytelling/
 
+### MapLibre
+
+* https://maplibre.org/
+
 ### usgs
 
 * https://ngmdb.usgs.gov/topoview/
