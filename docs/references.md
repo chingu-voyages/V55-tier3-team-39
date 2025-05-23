@@ -125,6 +125,17 @@ make appear content as scrolling down css
 morrison formation dinosaurs map svg
 get svg vector image map morrison formation
 
+### Vintage Maps
+
+* https://ngmdb.usgs.gov/topoview/viewer/#11/39.7646/-105.2560
+
+### Morrison Formation (others)
+
+* https://www.nps.gov/dino/learn/nature/morrisonformationutah.htm
+* https://dinodata.de/fundort/morrison_formation.php
+* https://montanafieldnotes.wordpress.com/
+* https://earthathome.org/hoe/sw/geologic-history/
+
 ### Morrison (Colorado)
 
 * [Map of Morrison Formation, Wikipedia](https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Stratotypes_for_members_of_the_Morrison_Formation.jpg/800px-Stratotypes_for_members_of_the_Morrison_Formation.jpg)
@@ -140,12 +151,19 @@ como bluff location coordinates
 ### Smoky Hill River (Kansas)
 
 * https://en.wikipedia.org/wiki/Smoky_Hill_Chalk
+* [Map of Smoky Hill in the Morrison Formation complex](https://www.kgs.ku.edu/Publications/Bulletins/162/03_strat_b.html)
 
 ### Animations
 
 * https://stackoverflow.com/questions/53587028/map-animation-on-html5-canvas-moving-through-the-path-when-scrolling-down-page
 
 * https://tympanus.net/codrops/2015/12/16/animated-map-path-for-interactive-storytelling/
+
+### usgs
+
+* https://ngmdb.usgs.gov/topoview/
+
+### StreetMap
 
 ### Mapbox
 
@@ -157,6 +175,8 @@ geojson vintage design
 * https://blog.mapbox.com/designing-the-vintage-style-in-mapbox-studio-9da4aa2a627f
 
 ### Leaflet.js (mapping tool)
+
+https://docs.maptiler.com/leaflet/examples/
 
 https://leafletjs.com/plugins.html#basemap-formats
 
