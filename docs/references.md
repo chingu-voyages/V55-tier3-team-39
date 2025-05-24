@@ -43,6 +43,11 @@ cope dino naming success rate
 
 #### Storytelling
 
+**Examples**:
+
+* https://codepen.io/skalar/pen/jOqgqOQ
+* https://codepen.io/jiayou/pen/YXZRgM
+
 * https://shorthand.com/
 * https://smartocto.com/blog/content-overkill-or-power-long-tail-articles/
 
@@ -86,12 +91,22 @@ With a scientific focus / data:
 * https://www.w3schools.com/howto/howto_css_fullscreen_video.asp
 
 
+#### HTML Image Mapping and Marking
+
+* https://www.w3schools.com/html/html_images_imagemap.asp
+* https://stackoverflow.com/questions/29582571/what-is-the-best-way-to-position-div-markers-over-a-base-image-and-allow-for-r
+
+#### Tracing markers with Canvas
+
+* https://canvasjs.com/forums/topic/set-image-as-a-marker/
+
 #### Parallax
 
 * https://blog.logrocket.com/create-parallax-scrolling-css/
 * https://line25.com/articles/showcase-of-parallax-scrolling-effects-in-web-design/
 * https://stackoverflow.com/questions/41667536/video-as-background-parallax-css
 * https://codeconvey.com/video-parallax-background-using-css3/
+* https://www.sketch.com/blog/what-is-a-parallax-effect/
 
 #### Silent Movie effect
 
@@ -102,8 +117,27 @@ silent film effect web development javascript css html
 make appear content as scrolling down css
 
 * https://coolcssanimation.com/how-to-trigger-a-css-animation-on-scroll/
-
 * https://www.sitepoint.com/community/t/make-content-appear-when-scroll-down-page/110832/2
+
+##### ScrollMagic (+ GSAP)
+
+https://github.com/janpaepke/ScrollMagic
+
+* Examples: 
+  * https://scrollmagic.io/examples/basic/debugging.html
+  * https://github.com/janpaepke/ScrollMagic/blob/master/assets/css/examples.css
+  * https://github.com/janpaepke/ScrollMagic/blob/master/examples/basic/debugging.html
+* https://scrollmagic.io/docs/index.html
+
+
+scrollmagic how it works
+
+* https://stackoverflow.com/questions/31887319/understanding-scrollmagic
+* https://ihatetomatoes.net/simple-scrollmagic-tutorial/
+* https://ihatetomatoes.net/visual-guide-scrollmagic/
+* https://github.com/janpaepke/ScrollMagic/wiki/Getting-Started-:-How-to-use-ScrollMagic
+* https://medium.com/@rdesai01/how-to-use-scrollmagic-technical-post-40f542602026
+
 
 #### Smooth Scrolling
 
@@ -186,9 +220,13 @@ vintage photos kansas great plains fossil
 morrison formation dinosaurs map svg
 get svg vector image map morrison formation
 
+* https://earthathome.org/hoe/sw/geologic-history/ !!!
+
 ### Vintage Maps
 
 * https://ngmdb.usgs.gov/topoview/viewer/#11/39.7646/-105.2560
+
+vintage map colorado kansas wyoming
 
 ### Morrison Formation (others)
 
@@ -249,7 +287,9 @@ geology paleontology
 
 ### Map Tools
 
-##### https://openlayers.org/
+#### https://openlayers.org/
+
+#### https://docs.maptiler.com/leaflet/examples/
 
 #### MapLibre
 
@@ -279,6 +319,37 @@ https://leafletjs.com/plugins.html#basemap-formats
 For rasterized images representing maps: https://commenthol.github.io/leaflet-rastercoords/
 
 For low definition tiles of geology: https://heigeo.github.io/leaflet.wms/examples/
+
+##### Quick Start
+
+https://github.com/Leaflet/Leaflet
+
+* https://leafletjs.com/examples.html
+* https://leafletjs.com/examples/quick-start/
+* https://leafletjs.com/examples/choropleth/
+* https://leafletjs.com/plugins.html#basemap-formats
+* https://www.youtube.com/watch?v=pU9OX-yjOkE
+
+
+##### adjusting and moving around
+
+* https://stackoverflow.com/questions/12735303/how-to-change-the-map-center-in-leaflet-js
+* https://gis.stackexchange.com/questions/147052/leaflet-js-map-pan-too-and-zoom-in-on-point
+* https://stackoverflow.com/questions/28117281/show-only-united-states-when-using-leaflet-js-and-osm
+
+##### providers; Stadia
+
+https://leaflet-extras.github.io/leaflet-providers/preview/
+https://github.com/leaflet-extras/leaflet-providers
+
+https://stackoverflow.com/questions/42354903/leaflet-map-remove-road-layer
+
+
+https://stackoverflow.com/questions/62923809/list-of-all-available-tile-layers-for-leaflet
+
+###### authentication for Stadia
+
+* https://docs.stadiamaps.com/authentication/
 
 ## Data Section
 
