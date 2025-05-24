@@ -41,15 +41,24 @@ cope dino naming success rate
 
 ### Techniques
 
+#### Image manipulation and Animation (Krita, GIMP)
+
+* https://docs.krita.org/en/user_manual/animation.html
+
 #### Storytelling
 
 **Examples**:
 
 * https://codepen.io/skalar/pen/jOqgqOQ
 * https://codepen.io/jiayou/pen/YXZRgM
+* https://www.bbc.com/storyworks
 
 * https://shorthand.com/
 * https://smartocto.com/blog/content-overkill-or-power-long-tail-articles/
+
+#### Basic Training
+
+* https://www.bbc.co.uk/bitesize/articles/zk8qnrd#z8rmywx
 
 #### IMPORTANT INSIGHTS:
 
