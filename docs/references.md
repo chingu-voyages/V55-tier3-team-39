@@ -7,13 +7,19 @@
 
 #### Cope
 
+* https://en.wikipedia.org/wiki/Edward_Drinker_Cope
+
 all species named by cope
 
 * https://dinopedia.fandom.com/wiki/Category:Taxa_named_by_Edward_Drinker_Cope
 * https://www.famousfix.com/list/taxa-named-by-edward-drinker-cope
 * https://species.wikimedia.org/wiki/Edward_Drinker_Cope
 
+locations where Cope was more active during the time he was working with fossils
+
 #### Marsh
+
+* https://en.wikipedia.org/wiki/Othniel_Charles_Marsh
 
 * https://dinopedia.fandom.com/wiki/Othniel_Charles_Marsh
 * https://extinctmonsters.net/the-marsh-dinosaurs-cretaceous/
@@ -21,6 +27,8 @@ all species named by cope
 * https://peoriaacademyofscience.org/wordpress/archives/o-c-marsh-lithographs/
 * https://www.pinterest.com/pin/413979390720043229/?utm_source=chatgpt.com
 * https://extinctmonsters.net/2014/07/16/museums-and-the-triceratops-posture-problem-part-1/
+
+locations where Marsh was more active during the time he was working with fossils
 
 #### naming confusion
 
@@ -33,10 +41,57 @@ cope dino naming success rate
 
 ### Techniques
 
+#### Storytelling
+
+* https://shorthand.com/
+* https://smartocto.com/blog/content-overkill-or-power-long-tail-articles/
+
+#### IMPORTANT INSIGHTS:
+
+* https://ijnet.org/en/story/what-worked-and-what-didn%E2%80%99t-bbc%E2%80%99s-hunt-new-storytelling-formats
+* https://medium.com/bbc-news-labs/beyond-800-words-new-digital-story-formats-for-news-ab9b2a2d0e0d
+* https://www.youtube.com/watch?v=FTllW6NhJJA
+* https://www.youtube.com/watch?v=CFYsVuuxJpU
+* https://disruptmarketing.co/blog/is-long-form-content-making-a-come-back/
+* https://www.linkedin.com/pulse/storytelling-trends-watch-2025-how-stay-ahead-changing-rogba-arimoro-nlb3f
+
+future of digital longform storytelling
+
+##### Over Storytelling Approaches
+* https://medium.com/behind-local-news-uk/bbc-sets-sights-on-winning-readers-to-long-form-and-local-investigative-journalism-94629e1bceb1
+* https://www.journalism.co.uk/news/how-the-bbc-approaches-longform-immersive-storytelling/s2/a557573/
+* https://pressgazette.co.uk/news/bbc-steps-back-from-virtual-reality-storytelling-with-closure-of-expert-hub/
+* https://www.bbc.co.uk/rd/blog/2019-02-storytelling-interactive-digital-drama
+* https://www.bbc.com/news/av/technology-56575292
+* https://www.youtube.com/watch?v=lb6Rd_MZRZk
+
+#### Examples (BBC)
+* https://www.bbc.co.uk/news/resources/idt-sh/I_love_animals_but_I_kill_them_too_hunting_alaskan_style
+* https://www.bbc.co.uk/news/resources/idt-sh/the_boys_on_the_ice
+* https://www.bbc.co.uk/news/special/2014/newsspec_7141/index.html
+* https://www.bbc.co.uk/news/magazine-25589709
+
+With a scientific focus / data:
+* https://www.sciencefocus.com/planet-earth/
+* https://www.discoverwildlife.com/
+* Verasitum
+* The Pudding
+* ThreeBrownOneBlue
+* FlowingData
+* (similars)
+
+
+#### Video
+
+* https://www.w3schools.com/howto/howto_css_fullscreen_video.asp
+
+
 #### Parallax
 
 * https://blog.logrocket.com/create-parallax-scrolling-css/
 * https://line25.com/articles/showcase-of-parallax-scrolling-effects-in-web-design/
+* https://stackoverflow.com/questions/41667536/video-as-background-parallax-css
+* https://codeconvey.com/video-parallax-background-using-css3/
 
 #### Silent Movie effect
 
@@ -102,7 +157,6 @@ make appear content as scrolling down css
 
 * t rex https://www.fossilguy.com/gallery/vert/dinosaur/tyrannosaurus/trex-discovery.htm
 
-* 
 
 ## Presentation Section
 
@@ -120,6 +174,13 @@ make appear content as scrolling down css
 
 * https://stackoverflow.com/questions/16463446/css-keyframe-animation-similar-to-stop-motion
 
+## Vintage Dinos
+
+vintage photos smoky river marsh dinosaurs
+vintage photos kansas great plains fossil
+
+* https://www.strangescience.net/stdino2.htm
+
 ## Map Section
 
 morrison formation dinosaurs map svg
@@ -136,22 +197,49 @@ get svg vector image map morrison formation
 * https://montanafieldnotes.wordpress.com/
 * https://earthathome.org/hoe/sw/geologic-history/
 
-### Morrison (Colorado)
+### Como Bluff (Wayoming) 1877-82
 
-* [Map of Morrison Formation, Wikipedia](https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Stratotypes_for_members_of_the_Morrison_Formation.jpg/800px-Stratotypes_for_members_of_the_Morrison_Formation.jpg)
-* Morrison Formation, Wikipedia (https://en.wikipedia.org/wiki/Morrison_Formation)
-* https://dinodata.de/fundort/morrison_formation.php
-
-### Como Bluff (Wayoming)
+Marsh Territory
 
 como bluff location coordinates
 
 * https://www.geowyo.com/como-bluff.html
 
-### Smoky Hill River (Kansas)
+### Garden Park (Colorado) 1877-80
+
+Contested Site: Joseph Felch supplied both Cope and Marsh at different times.
+
+### Morrison (Colorado) 1877
+
+After receiving word of the site, both Cope and Marsh scrambled to control fossil flow. Marsh bribed Lakes to keep Cope out, beginning the most public phase of the Bone Wars
+
+* [Map of Morrison Formation, Wikipedia](https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Stratotypes_for_members_of_the_Morrison_Formation.jpg/800px-Stratotypes_for_members_of_the_Morrison_Formation.jpg)
+* Morrison Formation, Wikipedia (https://en.wikipedia.org/wiki/Morrison_Formation)
+* https://dinodata.de/fundort/morrison_formation.php
+
+### Smoky Hill River (Kansas) 1871-72
 
 * https://en.wikipedia.org/wiki/Smoky_Hill_Chalk
 * [Map of Smoky Hill in the Morrison Formation complex](https://www.kgs.ku.edu/Publications/Bulletins/162/03_strat_b.html)
+* https://earthathome.org/hoe/sc/fossils-gp/
+
+### Niobrara Chalk (Kansas) 1870
+
+Niobrara Formation at Monument Rocks in western Kansas google maps
+
+kansas dinosaurs
+
+The Niobrara Chalk was recorded in 1857 and named in 1862 by Meek, F.B., and Hayden, F.V.[1] It was first studied during an expedition led by Othniel Charles Marsh of Yale University in 1870
+
+* https://en.wikipedia.org/wiki/Niobrara_Formation
+* https://en.wikipedia.org/wiki/Paleontology_in_Kansas
+
+### White River Badlands
+
+geology paleontology
+
+* https://www.nps.gov/articles/000/paleontology-badl.htm
+* https://en.wikipedia.org/wiki/White_River_Formation
 
 ### Animations
 
@@ -159,26 +247,30 @@ como bluff location coordinates
 
 * https://tympanus.net/codrops/2015/12/16/animated-map-path-for-interactive-storytelling/
 
-### MapLibre
+### Map Tools
+
+##### https://openlayers.org/
+
+#### MapLibre
 
 * https://maplibre.org/
 
-### usgs
+#### usgs
 
 * https://ngmdb.usgs.gov/topoview/
 
-### StreetMap
+#### OpenStreetMap
 
-### Mapbox
+#### Mapbox
 
-#### Making a vintage map
+##### Making a vintage map
 
 geojson vintage design
 
 * https://docs.maptiler.com/guides/map-design/how-to-style-a-retro-map/
 * https://blog.mapbox.com/designing-the-vintage-style-in-mapbox-studio-9da4aa2a627f
 
-### Leaflet.js (mapping tool)
+#### Leaflet.js (mapping tool)
 
 https://docs.maptiler.com/leaflet/examples/
 
