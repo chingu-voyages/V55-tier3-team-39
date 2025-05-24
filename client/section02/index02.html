@@ -8,7 +8,8 @@
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
  <!-- Make sure you put this AFTER Leaflet's CSS -->
  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
-  <title>Mapping the Bone Wars</title>
+ <script src="https://unpkg.com/leaflet-providers@latest/leaflet-providers.js"></script> 
+ <title>Mapping the Bone Wars</title>
   <style>
     body, html {
       margin: 0;
@@ -34,6 +35,15 @@
       background-position: center;
       background-size: cover;
       z-index: -1;
+    }
+
+    #map-background {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;   
     }
 
    .scrolly {
@@ -76,8 +86,8 @@
 <body>
 
   <section class="map-container">
-    <div class="map-background"></div>
-
+    <!--<div class="map-background"></div>-->
+    <div id="map-background"></div>
     <article class="scrolly">
       <!-- Title Introduction -->
        
@@ -120,7 +130,25 @@
       </div>
     </article>
   </section>
+  <script>
+    let leafletMap = L.map('map-background').setView([51.505, -0.09], 8);
+    //.setView([51.505, -0.09], 13);
 
+    //leafletMap.locate({setView: true, maxZoom: .2});
+
+    //let Stadia_StamenTerrainBackground = L.tileLayer('https://tiles.stadiamaps.com/tiles/stamen_terrain_background/{z}/{x}/{y}{r}.{ext}', {
+	  //    minZoom: 0,
+	  //    maxZoom: 18,
+	  //    attribution: '&copy; <a href="https://www.stadiamaps.com/" target="_blank">Stadia Maps</a> &copy; <a href="https://www.stamen.com/" target="_blank">Stamen Design</a> &copy; <a href="https://openmaptiles.org/" target="_blank">OpenMapTiles</a> &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+	  //    ext: 'png'
+    //})
+    //.addTo(leafletMap);
+    L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    maxZoom: 19,
+    attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+}).addTo(leafletMap);
+  L.tileLayer.provider('Stadia.StamenWatercolor').addTo(leafletMap);
+  </script>
 
   <script>
     //const steps = document.querySelectorAll('.step');
