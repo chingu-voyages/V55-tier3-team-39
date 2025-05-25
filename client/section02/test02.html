@@ -1,0 +1,142 @@
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.2/TweenMax.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/ScrollMagic.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/plugins/debug.addIndicators.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/plugins/animation.gsap.js"></script>
+        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
+        <!-- Make sure you put this AFTER Leaflet's CSS -->
+        <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+        <script src="https://unpkg.com/leaflet-providers@latest/leaflet-providers.js"></script> 
+    <style>
+
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: Georgia, serif;
+            /*background-color: #f8f1e3;
+            color: #222;*/
+        }
+
+        #map-background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;   
+        }
+
+        .scrolly {
+            position: relative;
+            width: auto;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 10vh 2rem;
+            overflow: scroll;
+        }
+
+        .step {
+            margin: 5rem 0;
+            background-color: rgba(0, 0, 0, 0.75);
+            color: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+        }
+
+        .title {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }        
+        
+        p {
+            text-align: center;
+            text-transform: uppercase;
+        }
+    </style>
+    <body>
+        <section class="section02">
+            <div id="map-background"></div>
+            <article class="scrolly">
+                <div class="step fade-in" data-step="0">
+                    <p style="color:red;"><strong>COMMENT: STEPS DON'T SHOW, SCROLLING EFFECT STILL NOT WORKING. SEE HTML. SCROLLING LIKE SCROLLAMA, LIKELY NAVIGATING A MAP IN BACKGROUND </strong> </p><p>(https://codepen.io/jqyu/pen/aOxxwX, https://codepen.io/jqyu/pen/aOxxwX)</p>
+
+                    <h2 class="title">🗺️ Mapping the Bone Wars</h2>
+                    <p>Where did it all happen? The Bone Wars left a trail across the American West. These are some of the most iconic sites where Cope and Marsh unearthed dinosaur history.</p>
+                </div>
+
+                <!-- Garden Park, Colorado -->
+                <div class="step fade-in" data-step="1">
+                    <p><strong>Garden Park, Colorado:</strong> A fossil hotspot near Cañon City, where both Marsh and Cope excavated bones of *Stegosaurus*, *Allosaurus*, and *Ceratosaurus*. Their rival teams camped just ridges apart.</p>
+                </div>
+
+                <!-- Como Bluff, Wyoming -->
+                <div class="step fade-in" data-step="2">
+                    <p><strong>Como Bluff, Wyoming:</strong> Discovered in 1877 by railroad workers, this site became a prolific bone bed for Marsh, yielding countless Jurassic species—including many that were later invalidated.</p>
+                </div>
+
+                <!-- Morrison, Colorado -->
+                <div class="step fade-in" data-step="3">
+                    <p><strong>Morrison, Colorado:</strong> A major early site for Cope, who raced to describe Jurassic bones faster than Marsh. This location would give its name to the famed Morrison Formation.</p>
+                </div>
+
+                <!-- Dakota Territory (now South Dakota) -->
+                <div class="step fade-in" data-step="4">
+                    <p><strong>Dakota Territory (now South Dakota):</strong> Cope’s 1876 expedition uncovered marine fossils and his controversial *Elasmosaurus*, which he famously reconstructed backward—fuel for Marsh’s ridicule.</p>
+                </div>
+
+                <!-- Judith River, Montana -->
+                <div class="step fade-in" data-step="5">
+                    <p><strong>Judith River, Montana:</strong> Although less central to the feud, this site became important for later discoveries. Cope briefly worked here, laying groundwork for future Cretaceous finds.</p>
+                </div>
+
+                <!-- Closing Note -->
+                <div class="step fade-in" data-step="6">
+                    <p>The locations are more than pins on a map—they're chapters in a saga of ambition, discovery, and scientific rivalry etched into the rock of the American West.</p>
+                </div>
+
+                                <!-- Closing Note -->
+                <div class="fade-in" data-step="7" style="height:100px">
+                </div>
+
+            </article>
+        </section>
+        <script>
+            let leafletMap = L.map('map-background').setView([51.505, -0.09], 8);
+            //.setView([51.505, -0.09], 13);
+
+            //leafletMap.locate({setView: true, maxZoom: .2});
+
+            //let Stadia_StamenTerrainBackground = L.tileLayer('https://tiles.stadiamaps.com/tiles/stamen_terrain_background/{z}/{x}/{y}{r}.{ext}', {
+            //    minZoom: 0,
+            //    maxZoom: 18,
+            //    attribution: '&copy; <a href="https://www.stadiamaps.com/" target="_blank">Stadia Maps</a> &copy; <a href="https://www.stamen.com/" target="_blank">Stamen Design</a> &copy; <a href="https://openmaptiles.org/" target="_blank">OpenMapTiles</a> &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+            //    ext: 'png'
+            //})
+            //.addTo(leafletMap);
+            
+            L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                maxZoom: 19,
+                attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+            }).addTo(leafletMap);
+
+            L.tileLayer.provider('Stadia.StamenWatercolor').addTo(leafletMap);
+        </script>
+        <script>
+            // init controller
+            var controller = new ScrollMagic.Controller();
+
+            // loop through all elements
+            document.querySelectorAll('.fade-in').forEach((elm, i)=>{
+                //let tween = TweenMax.from(elm, 0.3, {autoAlpha: 0, scale: 0.5, y: '+=30', ease:Linear.easeNone});
+                let scene = new ScrollMagic.Scene({
+                triggerElement: elm,
+                duration: '20%',
+                triggerHook: .6
+            })
+            //.setTween(tween) // trigger a TweenMax.to tween
+            .setPin(`[data-step = "${elm.dataset.step}"]`)
+            .addIndicators()
+            .addTo(controller);
+            })
+        </script>
+    </body>
+</html>
