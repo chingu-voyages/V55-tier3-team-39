@@ -17,7 +17,7 @@
         }
 
         #map-background {
-            position: fixed;
+            position: sticky;
             top: 0;
             left: 0;
             width: 100%;
@@ -31,7 +31,6 @@
             max-width: 800px;
             margin: 0 auto;
             padding: 10vh 2rem;
-            overflow: scroll;
         }
 
         .step {
@@ -56,7 +55,7 @@
         <section class="section02">
             <div id="map-background"></div>
             <article class="scrolly">
-                <div class="step fade-in" data-step="0">
+                <div class="step fade-in" data-step="0" data-geopoint="37.000,-120.652">
                     <p style="color:red;"><strong>COMMENT: STEPS DON'T SHOW, SCROLLING EFFECT STILL NOT WORKING. SEE HTML. SCROLLING LIKE SCROLLAMA, LIKELY NAVIGATING A MAP IN BACKGROUND </strong> </p><p>(https://codepen.io/jqyu/pen/aOxxwX, https://codepen.io/jqyu/pen/aOxxwX)</p>
 
                     <h2 class="title">🗺️ Mapping the Bone Wars</h2>
@@ -64,12 +63,12 @@
                 </div>
 
                 <!-- Garden Park, Colorado -->
-                <div class="step fade-in" data-step="1">
+                <div class="step fade-in" data-step="1" data-geopoint="35.232,-118.334">
                     <p><strong>Garden Park, Colorado:</strong> A fossil hotspot near Cañon City, where both Marsh and Cope excavated bones of *Stegosaurus*, *Allosaurus*, and *Ceratosaurus*. Their rival teams camped just ridges apart.</p>
                 </div>
 
                 <!-- Como Bluff, Wyoming -->
-                <div class="step fade-in" data-step="2">
+                <div class="step fade-in" data-step="2" data-geopoint="35.232,-118.334">
                     <p><strong>Como Bluff, Wyoming:</strong> Discovered in 1877 by railroad workers, this site became a prolific bone bed for Marsh, yielding countless Jurassic species—including many that were later invalidated.</p>
                 </div>
 
@@ -100,43 +99,70 @@
             </article>
         </section>
         <script>
-            let leafletMap = L.map('map-background').setView([51.505, -0.09], 8);
-            //.setView([51.505, -0.09], 13);
 
-            //leafletMap.locate({setView: true, maxZoom: .2});
+            //
+            // leafletjs
+            //
 
-            //let Stadia_StamenTerrainBackground = L.tileLayer('https://tiles.stadiamaps.com/tiles/stamen_terrain_background/{z}/{x}/{y}{r}.{ext}', {
-            //    minZoom: 0,
-            //    maxZoom: 18,
-            //    attribution: '&copy; <a href="https://www.stadiamaps.com/" target="_blank">Stadia Maps</a> &copy; <a href="https://www.stamen.com/" target="_blank">Stamen Design</a> &copy; <a href="https://openmaptiles.org/" target="_blank">OpenMapTiles</a> &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
-            //    ext: 'png'
-            //})
-            //.addTo(leafletMap);
+            let leafletMap = L.map('map-background');
+            leafletMap.setView([51.505, -0.09], 8);
             
-            L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
-                maxZoom: 19,
-                attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
-            }).addTo(leafletMap);
+            //L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            //    maxZoom: 19,
+            //    attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+            //}).addTo(leafletMap);
 
             L.tileLayer.provider('Stadia.StamenWatercolor').addTo(leafletMap);
-        </script>
-        <script>
+
+            //
+            // ScrollMagic
+            //
+
             // init controller
             var controller = new ScrollMagic.Controller();
 
             // loop through all elements
             document.querySelectorAll('.fade-in').forEach((elm, i)=>{
-                //let tween = TweenMax.from(elm, 0.3, {autoAlpha: 0, scale: 0.5, y: '+=30', ease:Linear.easeNone});
+                let tween = TweenMax.from(elm, 0.3, {autoAlpha: 0, scale: 0.5, y: '+=30', ease:Linear.easeNone});
                 let scene = new ScrollMagic.Scene({
                 triggerElement: elm,
-                duration: '20%',
-                triggerHook: .6
+                duration: '40%',
+                triggerHook: .45
             })
-            //.setTween(tween) // trigger a TweenMax.to tween
+            .setTween(tween) // trigger a TweenMax.to tween
+            .on('end', sceneHandler.bind(elm))
             .setPin(`[data-step = "${elm.dataset.step}"]`)
             .addIndicators()
             .addTo(controller);
-            })
+            });
+
+            function sceneHandler(e){
+
+                
+                let latlng;
+
+                if(this.dataset.geopoint){
+                    latlng = this.dataset.geopoint.split(',');
+                }
+
+               
+                let lat, lng, zoom;
+                if(this.dataset.step === '0'){
+                    // parse lat and lng from the divs data attribute
+                    lat = latlng[0];
+                    lng = latlng[1];
+                    zoom = 10;
+                }else{
+                    leafletMap.flyTo([51.505, -0.09], 8);
+                };
+
+
+                // set the view
+                if(lat !== undefined && lng !== undefined){
+                    leafletMap.flyTo([37, -120], 10);
+                };
+            }
         </script>
+        <script></script>
     </body>
 </html>

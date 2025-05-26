@@ -152,6 +152,8 @@ scrollmagic how it works
 * https://github.com/janpaepke/ScrollMagic/wiki/Getting-Started-:-How-to-use-ScrollMagic
 * https://medium.com/@rdesai01/how-to-use-scrollmagic-technical-post-40f542602026
 
+**Cheat Sheet**
+* https://ihatetomatoes.net/wp-content/uploads/2016/08/ScrollMagic-CheatsheetV2.pdf
 
 #### Smooth Scrolling
 
@@ -242,14 +244,16 @@ get svg vector image map morrison formation
 
 vintage map colorado kansas wyoming
 
-### Morrison Formation (others)
+### Locations of the Feud
+
+#### Morrison Formation (others)
 
 * https://www.nps.gov/dino/learn/nature/morrisonformationutah.htm
 * https://dinodata.de/fundort/morrison_formation.php
 * https://montanafieldnotes.wordpress.com/
 * https://earthathome.org/hoe/sw/geologic-history/
 
-### Como Bluff (Wayoming) 1877-82
+#### Como Bluff (Wayoming) 1877-82
 
 Marsh Territory
 
@@ -257,11 +261,11 @@ como bluff location coordinates
 
 * https://www.geowyo.com/como-bluff.html
 
-### Garden Park (Colorado) 1877-80
+#### Garden Park (Colorado) 1877-80
 
 Contested Site: Joseph Felch supplied both Cope and Marsh at different times.
 
-### Morrison (Colorado) 1877
+#### Morrison (Colorado) 1877
 
 After receiving word of the site, both Cope and Marsh scrambled to control fossil flow. Marsh bribed Lakes to keep Cope out, beginning the most public phase of the Bone Wars
 
@@ -269,13 +273,13 @@ After receiving word of the site, both Cope and Marsh scrambled to control fossi
 * Morrison Formation, Wikipedia (https://en.wikipedia.org/wiki/Morrison_Formation)
 * https://dinodata.de/fundort/morrison_formation.php
 
-### Smoky Hill River (Kansas) 1871-72
+#### Smoky Hill River (Kansas) 1871-72
 
 * https://en.wikipedia.org/wiki/Smoky_Hill_Chalk
 * [Map of Smoky Hill in the Morrison Formation complex](https://www.kgs.ku.edu/Publications/Bulletins/162/03_strat_b.html)
 * https://earthathome.org/hoe/sc/fossils-gp/
 
-### Niobrara Chalk (Kansas) 1870
+#### Niobrara Chalk (Kansas) 1870
 
 Niobrara Formation at Monument Rocks in western Kansas google maps
 
@@ -286,12 +290,16 @@ The Niobrara Chalk was recorded in 1857 and named in 1862 by Meek, F.B., and Hay
 * https://en.wikipedia.org/wiki/Niobrara_Formation
 * https://en.wikipedia.org/wiki/Paleontology_in_Kansas
 
-### White River Badlands
+#### White River Badlands
 
 geology paleontology
 
 * https://www.nps.gov/articles/000/paleontology-badl.htm
 * https://en.wikipedia.org/wiki/White_River_Formation
+
+### New Jersey
+
+
 
 ### Animations
 
@@ -350,6 +358,10 @@ https://github.com/Leaflet/Leaflet
 * https://stackoverflow.com/questions/12735303/how-to-change-the-map-center-in-leaflet-js
 * https://gis.stackexchange.com/questions/147052/leaflet-js-map-pan-too-and-zoom-in-on-point
 * https://stackoverflow.com/questions/28117281/show-only-united-states-when-using-leaflet-js-and-osm
+
+#### drawing polygons
+
+* https://www.youtube.com/watch?v=eTIjwr-z4Fo
 
 ##### providers; Stadia
 
