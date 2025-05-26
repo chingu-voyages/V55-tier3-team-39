@@ -112,7 +112,16 @@
             //    attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
             //}).addTo(leafletMap);
 
+            //L.tileLayer.provider('Stadia.StamenWatercolor').addTo(leafletMap);
             L.tileLayer.provider('Stadia.StamenWatercolor').addTo(leafletMap);
+
+            let COORDINATES = {
+                HADDONFIELD : {
+                    POLYGON : new L.polygon([[40.004, -75.332], [40.004, -74.680], [39.827, -74.680], [39.827, -75.332]]),
+                    MARKER : new L.marker([39.91018, -75.02856]).bindTooltip("Haddonfield", {permanent: true, direction: 'rigt'}),
+                    CENTER: [39.91018, -75.02856]
+                }
+            }
 
             //
             // ScrollMagic
@@ -159,7 +168,9 @@
 
                 // set the view
                 if(lat !== undefined && lng !== undefined){
-                    leafletMap.flyTo([37, -120], 10);
+                    leafletMap.flyTo(COORDINATES.HADDONFIELD.CENTER, 11);
+                    COORDINATES.HADDONFIELD.POLYGON.addTo(leafletMap);
+                    COORDINATES.HADDONFIELD.MARKER.addTo(leafletMap);
                 };
             }
         </script>

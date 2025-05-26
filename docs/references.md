@@ -1,9 +1,12 @@
 ## General, over content, images about the period, etc
 
+https://www.youtube.com/watch?v=erwczioi9us
+
 ### Cope and Marsh, Bone Wars, The Rush
 
 * http://mikesirota.com/who-won-the-bone-wars/
 * https://www.ebsco.com/research-starters/history/bone-wars
+* https://www.levins.com/bwars.shtml (very good)
 
 #### Cope
 
@@ -154,6 +157,7 @@ scrollmagic how it works
 
 **Cheat Sheet**
 * https://ihatetomatoes.net/wp-content/uploads/2016/08/ScrollMagic-CheatsheetV2.pdf
+* https://scrollmagic.io/docs/ScrollMagic.Scene.html#on
 
 #### Smooth Scrolling
 
@@ -297,9 +301,31 @@ geology paleontology
 * https://www.nps.gov/articles/000/paleontology-badl.htm
 * https://en.wikipedia.org/wiki/White_River_Formation
 
-### New Jersey
+#### Haddonfield, New Jersey 1868
 
+The "Bone Wars" in paleontology, a fierce rivalry between Edward Drinker Cope and Othniel Charles Marsh, had significant roots in New Jersey, specifically in Haddonfield. In 1868, Cope invited Marsh to a fossil quarry in Haddonfield, but Marsh secretly made an agreement with the quarry owner to have all future discoveries sent to him, effectively barring Cope from the site. This act, according to Cope, marked the beginning of their intense competition and the "Bone Wars". According to www.levins.com, Haddonfield is where the "Bone Wars" began and where Cope and Marsh competed to find and document dinosaur fossils. 
+O.C. Marsh and E.D. Cope: A Rivalry | American Experience
+In 1868, in an act of friendship, Cope had shown Marsh around a fossil quarry in Haddonfield, New Jersey. Behind Cope's back, howe...
 
+PBS
+
+They were rock stars of paleontology—and their feud was ...
+21 mei 2024 — Othniel Charles Marsh and Edward Drinker Cope were two of the 19 th century's most prolific bone hunters. They discover...
+
+National Geographic
+
+The Bone Wars: How an Intense Rivalry Helped Shape Palaeontology
+From Friends to Enemies. Edward Drinker Cope and Othniel C. Marsh didn't start off as enemies. In fact, you could even call them f...
+
+Noiser
+
+Alles tonen
+
+old map of new jersey 1800
+
+* https://en.wikipedia.org/wiki/Hadrosaurus_Foulkii_Leidy_Site
+* https://bostonraremaps.com/inventory/the-finest-18th-century-map-of-new-jersey/
+* https://thevintagemapshop.com/products/vintage-map-the-province-of-new-jersey-1778
 
 ### Animations
 
@@ -322,6 +348,8 @@ geology paleontology
 * https://ngmdb.usgs.gov/topoview/
 
 #### OpenStreetMap
+
+#### Maperative
 
 #### Mapbox
 
@@ -359,11 +387,34 @@ https://github.com/Leaflet/Leaflet
 * https://gis.stackexchange.com/questions/147052/leaflet-js-map-pan-too-and-zoom-in-on-point
 * https://stackoverflow.com/questions/28117281/show-only-united-states-when-using-leaflet-js-and-osm
 
-#### drawing polygons
+#### drawing polygons, icons, markers and tooltips, and removing them
+
+leaflet providers how to remove roads and cities
 
 * https://www.youtube.com/watch?v=eTIjwr-z4Fo
+* https://www.youtube.com/watch?v=_Mz5Uixey5o
+* https://www.youtube.com/watch?v=o041giJsXZQ
+
+* https://stackoverflow.com/questions/34775308/leaflet-how-to-add-a-text-label-to-a-custom-marker-icon
+
+#### overlay images
+
+* https://www.youtube.com/watch?v=12GC3iA84HY&t=4s
 
 ##### providers; Stadia
+
+var Esri_WorldShadedRelief = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Shaded_Relief/MapServer/tile/{z}/{y}/{x}', {
+	attribution: 'Tiles &copy; Esri &mdash; Source: Esri',
+	maxZoom: 13
+});
+var Stadia_StamenTonerLabels = L.tileLayer('https://tiles.stadiamaps.com/tiles/stamen_toner_labels/{z}/{x}/{y}{r}.{ext}', {
+	minZoom: 0,
+	maxZoom: 20,
+	attribution: '&copy; <a href="https://www.stadiamaps.com/" target="_blank">Stadia Maps</a> &copy; <a href="https://www.stamen.com/" target="_blank">Stamen Design</a> &copy; <a href="https://openmaptiles.org/" target="_blank">OpenMapTiles</a> &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+	ext: 'png'
+});
+
+https://stackoverflow.com/questions/42354903/leaflet-map-remove-road-layer
 
 https://leaflet-extras.github.io/leaflet-providers/preview/
 https://github.com/leaflet-extras/leaflet-providers
