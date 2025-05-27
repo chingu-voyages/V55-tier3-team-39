@@ -39,6 +39,7 @@
             color: white;
             padding: 1.5rem;
             border-radius: 8px;
+            opacity: 0;
         }
 
         .title {
@@ -50,6 +51,11 @@
             text-align: center;
             text-transform: uppercase;
         }
+
+        .cope-icon{
+            filter: hue-rotate(120deg);
+        }
+
     </style>
     <body>
         <section class="section02">
@@ -63,7 +69,7 @@
                 </div>
 
                 <!-- Garden Park, Colorado -->
-                <div class="step fade-in" data-step="1" data-geopoint="35.232,-118.334">
+                <div class="step fade-in" data-step="1" data-geopoint="41.010769, -104.100826">
                     <p><strong>Garden Park, Colorado:</strong> A fossil hotspot near Cañon City, where both Marsh and Cope excavated bones of *Stegosaurus*, *Allosaurus*, and *Ceratosaurus*. Their rival teams camped just ridges apart.</p>
                 </div>
 
@@ -113,15 +119,44 @@
             //}).addTo(leafletMap);
 
             //L.tileLayer.provider('Stadia.StamenWatercolor').addTo(leafletMap);
-            L.tileLayer.provider('Stadia.StamenWatercolor').addTo(leafletMap);
+            //L.tileLayer.provider('Esri.WorldShadedRelief').addTo(leafletMap);
+            L.tileLayer.provider('OpenStreetMap.HOT').addTo(leafletMap);
+
+            //const copeIcon = L.divIcon({className:'cope-icon'});
+            const copeIcon = L.divIcon({className:'cope-icon'})
 
             let COORDINATES = {
                 HADDONFIELD : {
-                    POLYGON : new L.polygon([[40.004, -75.332], [40.004, -74.680], [39.827, -74.680], [39.827, -75.332]]),
-                    MARKER : new L.marker([39.91018, -75.02856]).bindTooltip("Haddonfield", {permanent: true, direction: 'rigt'}),
-                    CENTER: [39.91018, -75.02856]
+                    POLYGON : L.polygon([[40.004, -75.332], [40.004, -74.680], [39.827, -74.680], [39.827, -75.332]]),
+                    MARKER : L.marker([39.91018, -75.02856]).bindTooltip("Haddonfield", {permanent: true, direction: 'rigt'}),
+                    CENTER: [39.91018, -75.02856],
+                    IMAGE: L.imageOverlay('../assets/img/Haddonfield.jpg', [[40.234, -75.822],[39.500, -74.099]])
+                },
+                WEST : {
+                    MARKERS : {
+                        ComoLake_Marsh: L.marker([41.909779, -106.364129]).bindTooltip("Como Lake, 1868", {permanent: true, direction: 'top'}),
+                        Badlands_Marsh: L.marker([43.45, -102.30]).bindTooltip("Badlands, 1870", {permanent: true, direction: 'rigt'}),
+                        NiobaraChalk_Marsh: L.marker([42.747, -98.040]).bindTooltip("Niobara Chalk, 1870", {permanent: true, direction: 'rigt'}),
+                        Wallace_Marsh: L.marker([38.894155, -101.592892]).bindTooltip("Wallace, 1870", {permanent: true, direction: 'top'}),
+                        KansasWest01_Cope: L.marker([38.48, -100.56]).bindTooltip("Smoky Hill River, 1871", {permanent: true, direction: 'bottom'}),
+                        KansasWest02_Marsh: L.marker([38.48, -100.40]),
+                        NewMexico_Cope: L.marker([36.205693, -105.184615]).bindTooltip("New Mexico, 1876", {permanent: true, direction: 'rigt'}),
+                        Calendron_Cope: L.marker([34.821501, -100.963243]).bindTooltip("Calendron, 1876", {permanent: true, direction: 'rigt'}),
+                        Morrinson_Marsh: L.marker([39.627762, -105.205718]).bindTooltip("Morrinson, 1877", {permanent: true, direction: 'rigt'}),
+                        CanonCity01_Cope: L.marker([38.530034, -105.207316]).bindTooltip("Canyon City, 1877", {permanent: true, direction: 'rigt'}),
+                        CanonCity02_Marsh: L.marker([38.540034, -105.07316]),
+                        ComoBluff01_Cope: L.marker([41.918585, -106.053964]).bindTooltip("Como Bluff, 1877", {permanent: true, direction: 'rigt'}),
+                        ComoBluff02_Marsh: L.marker([41.998585, -105.53964]),
+
+   
+
+                    },                  
+                    CENTER: [42.910769, -104.100826],
+                    IMAGE: L.imageOverlay('../assets/img/West.png', [[49.012996, -114.985097],[36.789253, -93.817622]], {opacity: 0.9})
                 }
             }
+
+            //L.marker([41.010769, -104.100826]).bindTooltip("TheWestFront", {permanent: true, direction: 'rigt'}),
 
             //
             // ScrollMagic
@@ -161,17 +196,36 @@
                     lat = latlng[0];
                     lng = latlng[1];
                     zoom = 10;
+                    // set the view
+                    if(lat !== undefined && lng !== undefined){
+                        leafletMap.flyTo(COORDINATES.HADDONFIELD.CENTER, 11);
+                        //COORDINATES.HADDONFIELD.POLYGON.addTo(leafletMap);
+                        COORDINATES.HADDONFIELD.IMAGE.addTo(leafletMap);
+                        COORDINATES.HADDONFIELD.MARKER.addTo(leafletMap);
+                    };
+                }else if(this.dataset.step === '1'){
+                    // parse lat and lng from the divs data attribute
+                    lat = latlng[0];
+                    lng = latlng[1];
+                    zoom = 10;
+                    if(lat !== undefined && lng !== undefined){
+                        leafletMap.flyTo(COORDINATES.WEST.CENTER, 6);
+                        //COORDINATES.HADDONFIELD.POLYGON.addTo(leafletMap);
+                        COORDINATES.WEST.IMAGE.addTo(leafletMap);
+                        //COORDINATES.WEST.MARKER.addTo(leafletMap);
+                        let markerKeys = Object.keys(COORDINATES.WEST.MARKERS);
+                        for(let key of markerKeys){
+                            let marker = COORDINATES.WEST.MARKERS[key].addTo(leafletMap);
+                            let who = key.split('_')[1];
+                            if(who == 'Cope') marker._icon.classList.add("cope-icon");
+                        }
+                    };
                 }else{
                     leafletMap.flyTo([51.505, -0.09], 8);
                 };
 
 
-                // set the view
-                if(lat !== undefined && lng !== undefined){
-                    leafletMap.flyTo(COORDINATES.HADDONFIELD.CENTER, 11);
-                    COORDINATES.HADDONFIELD.POLYGON.addTo(leafletMap);
-                    COORDINATES.HADDONFIELD.MARKER.addTo(leafletMap);
-                };
+
             }
         </script>
         <script></script>

@@ -8,6 +8,43 @@ https://www.youtube.com/watch?v=erwczioi9us
 * https://www.ebsco.com/research-starters/history/bone-wars
 * https://www.levins.com/bwars.shtml (very good)
 
+### Trips
+
+* https://www.nasonline.org/wp-content/uploads/2024/06/marsh_othniel.pdf
+
+page 36-40
+
+Jurassic
+
+Marsh --- 1868 --- Great Plains (Como Lake, Wyoming) <sauropod>
+Marsh --- 1870 --- White River Badlands (Dakota) https://en.wikipedia.org/wiki/Badlands_National_Park
+Marsh --- 1870-1872 --- Niobrara Chalk (Kansas) <Claosaurus>
+Cope --- 1871 --- West Kansas (Kansas)
+Marsh --- 1872 --- Smoky River (Kansas) 
+Cope --- 1873 --- Titanothere Beds of Colorado
+Cope --- 1874 --- New Mexico
+Cope --- 1876 --- Judy River (Montana) <big_sauropod>
+Cope --- 1976 --- Calendron Beds (Texas)
+Marsh --- 1877-1886 --- Note from A. Lakes (Denver) quarry of discoveries in Morrison (Colorado) <Atlantosaurus>
+Cope --- 1877-1886 --- same than above, but late to the negotiation
+Cope --- 1877-1886 --- Negotiated with Lucas, Canyon City (Colorado) <Camarasaurus>
+Cope / Marsh --- 1877-1886 --- Garden Park (Colorado) 
+(SIMILAR COORDS TO Canyon City)
+Contested Site: Joseph Felch supplied both Cope and Marsh at different times.
+
+Cope --- 1877 --- Como Bluff (Wyoming)
+Williston (Marsh) -- 1877 -- from Kansas to Morrison then to Como Bluff, after being informed by rail workers (Reed and Carlin) (Wyoming) <Diplodocus>
+Cope eventually loses grip over the Como Bluff area
+
+Both exploited the area for long until 1886, Marsh being more successful (more diggers, assistants, money, etc)
+
+Cretaceous
+
+1888 --- Marsh --- east central part of Converse (now Niobara) (Wyoming)
+
+Lasted until 1892
+
+
 #### Cope
 
 * https://en.wikipedia.org/wiki/Edward_Drinker_Cope
@@ -264,6 +301,7 @@ Marsh Territory
 como bluff location coordinates
 
 * https://www.geowyo.com/como-bluff.html
+* https://sites.rootsweb.com/~wytttp/bonewars.htm
 
 #### Garden Park (Colorado) 1877-80
 
@@ -388,6 +426,8 @@ https://github.com/Leaflet/Leaflet
 * https://stackoverflow.com/questions/28117281/show-only-united-states-when-using-leaflet-js-and-osm
 
 #### drawing polygons, icons, markers and tooltips, and removing them
+
+* https://stackoverflow.com/questions/23567203/leaflet-changing-marker-color
 
 leaflet providers how to remove roads and cities
 
