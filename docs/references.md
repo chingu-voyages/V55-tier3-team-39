@@ -307,6 +307,8 @@ como bluff location coordinates
 
 Contested Site: Joseph Felch supplied both Cope and Marsh at different times.
 
+https://www.historycolorado.org/story/2024/09/06/fire-boneyard
+
 #### Morrison (Colorado) 1877
 
 After receiving word of the site, both Cope and Marsh scrambled to control fossil flow. Marsh bribed Lakes to keep Cope out, beginning the most public phase of the Bone Wars
@@ -437,9 +439,10 @@ leaflet providers how to remove roads and cities
 
 * https://stackoverflow.com/questions/34775308/leaflet-how-to-add-a-text-label-to-a-custom-marker-icon
 
-#### overlay images
+#### overlay images; adding images
 
 * https://www.youtube.com/watch?v=12GC3iA84HY&t=4s
+* https://stackoverflow.com/questions/66572730/how-to-show-an-image-and-a-link-on-a-popup-when-clicking-on-a-leaflet-marker
 
 ##### providers; Stadia
 
