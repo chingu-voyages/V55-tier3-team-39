@@ -23,7 +23,7 @@ Cope --- 1871 --- West Kansas (Kansas)
 Marsh --- 1872 --- Smoky River (Kansas) 
 Cope --- 1873 --- Titanothere Beds of Colorado
 Cope --- 1874 --- New Mexico
-Cope --- 1876 --- Judy River (Montana) <big_sauropod>
+Cope --- 1876 --- Judy River (Montana) <big_sauropod> (https://www.science.org/doi/10.1126/science.40.1021.134)
 Cope --- 1976 --- Calendron Beds (Texas)
 Marsh --- 1877-1886 --- Note from A. Lakes (Denver) quarry of discoveries in Morrison (Colorado) <Atlantosaurus>
 Cope --- 1877-1886 --- same than above, but late to the negotiation
@@ -127,6 +127,7 @@ future of digital longform storytelling
 * https://www.theonlinescientist.com/scrollytelling-an-interactive-way-to-tell-your-story/
 * https://showit.com/business-growth/scrollytelling-engage-website-visitors-with-a-unique-interactive-story/
 * https://flourish.studio/blog/no-code-scrollytelling/
+* About DINOS!!! https://montanadinosaurdigs.com/dinosaur-digs/
 
 With a scientific focus / data:
 * https://www.sciencefocus.com/planet-earth/
@@ -177,6 +178,8 @@ https://github.com/janpaepke/ScrollMagic
 
 * https://webflow.com/made-in-webflow/scrollmagic
 
+* https://github.com/janpaepke/ScrollMagic/issues/378
+
 * Examples: 
   * https://scrollmagic.io/examples/basic/debugging.html
   * https://github.com/janpaepke/ScrollMagic/blob/master/assets/css/examples.css
@@ -225,6 +228,36 @@ scrollmagic how it works
 ### Silent Movies, Typography
 
 * first silent film
+
+old western typography google fonts
+1800 newspaper typography google fonts
+
+To find Google Fonts that evoke the look of 1800s newspaper typography, you can explore several options. Fonts that are reminiscent of early 19th-century newspaper styles include those inspired by sans-serifs, Old English styles, or those that feature decorative elements like wood type. 
+Here's a more detailed breakdown:
+1. Sans-Serif and Grotesque Fonts:
+Archivo:
+This font is a modern take on late 19th-century American typefaces, designed for headlines and highlights. 
+Poiret One:
+This font has a geometric, Art Deco style, suitable for headlines and short texts. 
+Antic Didone:
+A sans-serif with a strong, geometric feel, suitable for headlines and display text. 
+2. Old English and Gothic Styles:
+IM Fell: A typeface inspired by 19th-century European hymn books, featuring an elegant and formal style. 
+Garamond: A classic Old Style serif, often used in newspaper typesetting and other print media. 
+Unifraktur Maguntia: A fancy display font inspired by German 19th-century foundries. 
+3. Decorative and Wood Type Inspirations:
+Brim Narrow: Inspired by antique wood and chromatic type from the 1800s. 
+Smythe: A mashup of "Arts and Crafts" and "Art Deco" styles from the late 19th and early 20th centuries. 
+Applewood Alternate Font: Features a handmade and vintage look with distinctive imperfections. 
+4. Modern Interpretations of Classic Styles:
+Domine:
+A modern serif with elements reminiscent of Cheltenham and Clearface, suitable for body text. 
+Noticia Text:
+A humanist slab serif designed for digital newspapers, with a large x-height and ample proportions. 
+Tips for Finding Fonts:
+Use keywords: Search Google Fonts using terms like "Old English," "Gothic," "Blackletter," "Arts and Crafts," "Art Deco," or "Victorian". 
+Explore different categories: Look beyond just the "Serif" and "Sans-Serif" categories. 
+Consider the context: Think about what kind of text you're using the font for (headlines, body text, etc.) and choose a font that fits. 
 
 #### Color Palette
 
@@ -485,6 +518,25 @@ how to make a chart represented by human icons
 
 * https://gist.github.com/henryjameslau/3299be02d548f999c8ae01699ab1ead2
 * https://eagereyes.org/blog/2013/isotype
+
+
+                    let who = this.dataset.location.split('_')[0];
+                       
+
+                        
+                        //COORDINATES.HADDONFIELD.POLYGON.addTo(leafletMap);
+                        COORDINATES.WEST.IMAGE.addTo(leafletMap);
+                        //COORDINATES.WEST.MARKER.addTo(leafletMap);
+                        let marker = COORDINATES.WEST.MARKERS['ComoLake'].addTo(leafletMap);
+                        let who = key.split('_')[1];
+                        if(who == 'Cope') marker._icon.classList.add("cope-icon");
+                        let markerKeys = Object.keys(COORDINATES.WEST.MARKERS);
+                        for(let key of markerKeys){
+                            let marker = COORDINATES.WEST.MARKERS[key].addTo(leafletMap);
+                            let who = key.split('_')[1];
+                            if(who == 'Cope') marker._icon.classList.add("cope-icon");
+                        }
+                    };
 
 
 

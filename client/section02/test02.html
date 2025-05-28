@@ -3,10 +3,14 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/plugins/debug.addIndicators.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/plugins/animation.gsap.js"></script>
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=IM+Fell+English:ital@0;1&family=Rye&display=swap" rel="stylesheet">
         <!-- Make sure you put this AFTER Leaflet's CSS -->
         <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
         <script src="https://unpkg.com/leaflet-providers@latest/leaflet-providers.js"></script> 
     <style>
+
+
 
         body, html {
             margin: 0;
@@ -28,28 +32,51 @@
         .scrolly {
             position: relative;
             width: auto;
-            max-width: 800px;
+            max-width: 100vh;
             margin: 0 auto;
             padding: 10vh 2rem;
         }
 
         .step {
             margin: 5rem 0;
-            background-color: rgba(0, 0, 0, 0.75);
-            color: white;
+            /*background-color: rgba(0, 0, 0, 0.75);
+            color: white;*/
+            background-color: #f3edda;
             padding: 1.5rem;
             border-radius: 8px;
-            opacity: 0;
+            opacity: .85;
+            max-width: 800px;    
+        }
+
+        .left, .right{
+            max-width: 300px;
+        }
+
+        .left{
+            margin-left:0px !important;
+        }
+
+        .right{
+            margin-right:0px !important;
         }
 
         .title {
             font-size: 2rem;
             margin-bottom: 1rem;
+            font-family: "Rye", serif;
+            font-weight: 400;
+            font-style: normal;
+            text-align: center;
+            color: #3a2317;
         }        
         
         p {
             text-align: center;
-            text-transform: uppercase;
+            font-family: "IM Fell English", serif;
+            font-weight: 400;
+            font-size: 1.2em;
+            font-style: italic;
+            color: #3a2317;
         }
 
         .cope-icon{
@@ -61,46 +88,90 @@
         <section class="section02">
             <div id="map-background"></div>
             <article class="scrolly">
-                <div class="step fade-in" data-step="0" data-geopoint="37.000,-120.652">
-                    <p style="color:red;"><strong>COMMENT: STEPS DON'T SHOW, SCROLLING EFFECT STILL NOT WORKING. SEE HTML. SCROLLING LIKE SCROLLAMA, LIKELY NAVIGATING A MAP IN BACKGROUND </strong> </p><p>(https://codepen.io/jqyu/pen/aOxxwX, https://codepen.io/jqyu/pen/aOxxwX)</p>
-
-                    <h2 class="title">🗺️ Mapping the Bone Wars</h2>
-                    <p>Where did it all happen? The Bone Wars left a trail across the American West. These are some of the most iconic sites where Cope and Marsh unearthed dinosaur history.</p>
+                <div class="step fade-in" data-step="0">
+                    <!--<p style="color:red;"><strong>COMMENT: STEPS DON'T SHOW, SCROLLING EFFECT STILL NOT WORKING. SEE HTML. SCROLLING LIKE SCROLLAMA, LIKELY NAVIGATING A MAP IN BACKGROUND </strong> </p><p>(https://codepen.io/jqyu/pen/aOxxwX, https://codepen.io/jqyu/pen/aOxxwX)</p>-->
+                    <h2 class="title">The Conquest of the (Fossilized...) West</h2>
+                    <p>Where did it all happen? The Bone Wars left a trail across the American West. These are some of the most iconic sites where Cope and Marsh unearthed dinosaur history...</p>
                 </div>
-
+                <div class="step center fade-in" data-step="1">
+                    <p> Our story moves from the East Coast to one of the best places to find fossils in USA: The regions around the canyons of Colorado, Montana, Wyoming, the Dakotas, Kansas and Nebraska.</p>
+                </div>
+                <div class="step center fade-in" data-step="2">
+                    <p> It is the time of a <strong>rapid expansion to the West</strong>.</p><p>The train is coming, and there is a lot of excavations, also easing the transport of people and cargo (aka bones).</p><p>Also there is a lot of interest in surveying all the resources of the area, so understanding the geography and the geology become very important to the central goverment plans.</p>
+                </div>
                 <!-- Garden Park, Colorado -->
-                <div class="step fade-in" data-step="1" data-geopoint="41.010769, -104.100826">
-                    <p><strong>Garden Park, Colorado:</strong> A fossil hotspot near Cañon City, where both Marsh and Cope excavated bones of *Stegosaurus*, *Allosaurus*, and *Ceratosaurus*. Their rival teams camped just ridges apart.</p>
+                <div class="step left fade-in" data-step="3" data-location="ComoLake_Marsh">
+                    <p>1868 - <strong>Marsh makes the first move</strong></p><p>This represents new opportunities for those looking for bones in unexplored areas. Marsh makes contacts and travel to the surroundings of Como Lake in what is now Wyoming.</p>
                 </div>
-
+                <div class="step fade-in" data-step="3" data-location="ComoLake_Marsh">
+                    <p>The area around Como Lake was not at first a very important source of bones - it will be one of the best later on.</p>
+                </div>
                 <!-- Como Bluff, Wyoming -->
-                <div class="step fade-in" data-step="2" data-geopoint="35.232,-118.334">
-                    <p><strong>Como Bluff, Wyoming:</strong> Discovered in 1877 by railroad workers, this site became a prolific bone bed for Marsh, yielding countless Jurassic species—including many that were later invalidated.</p>
+                <div class="step right fade-in" data-step="4" data-location="Badlands_Marsh">
+                    <p>It is now 1870.</p><p>For now, Marsh decides to places his people on promising river basins in Dakota...</p>
+                </div>
+                <div class="step left fade-in" data-step="5" data-location="NiobaraChalk_Marsh">
+                    <p>... Nebraska...</p>
                 </div>
 
-                <!-- Morrison, Colorado -->
-                <div class="step fade-in" data-step="3">
-                    <p><strong>Morrison, Colorado:</strong> A major early site for Cope, who raced to describe Jurassic bones faster than Marsh. This location would give its name to the famed Morrison Formation.</p>
+                <div class="step left fade-in" data-step="6" data-location="Wallace_Marsh">
+                    <p>... and Kansas.</p>
                 </div>
-
-                <!-- Dakota Territory (now South Dakota) -->
-                <div class="step fade-in" data-step="4">
-                    <p><strong>Dakota Territory (now South Dakota):</strong> Cope’s 1876 expedition uncovered marine fossils and his controversial *Elasmosaurus*, which he famously reconstructed backward—fuel for Marsh’s ridicule.</p>
+                <div class="step right fade-in" data-step="7" data-location="KansasWest01_Cope">
+                    <p>1871 - <strong>Cope wants also to get some</strong>.</p><p>He focus on the areas of Smoky Hill, close to the known Monument Rocks in Kansas.</p>
                 </div>
-
-                <!-- Judith River, Montana -->
-                <div class="step fade-in" data-step="5">
-                    <p><strong>Judith River, Montana:</strong> Although less central to the feud, this site became important for later discoveries. Cope briefly worked here, laying groundwork for future Cretaceous finds.</p>
+                <div class="step left fade-in" data-step="8" data-location="KansasWest02_Marsh">
+                    <p>But this is Marsh "territory". He sends his assistances to <i>also</i> explore the area.</p><p>Both get interesting results from the explorations, mostly fossils from sea fauna.</p><p>All this area was under a sea...</p>
                 </div>
-
+               <div class="step fade-in" data-step="9" data-location="KansasWest02_Marsh">
+                    <p>They both stay concentrated on their territories for a few years.</p><p>There is enough material to get a hand on.</p>
+                </div>
+               <div class="step fade-in" data-step="10" data-location="NewMexico_Cope">
+                    <p>Concentrated... but not quite.</p><p>For example, Cope goes with governmental surveying teams (as volunteer), and travels to New Mexico...</p>
+                </div>
+               <div class="step fade-in" data-step="11" data-location="Calendron_Cope">
+                    <p>... and Texas.</p>
+                </div>
+               <div class="step fade-in" data-step="12" data-location="JudithRiver02_Cope">
+                    <p>He even gets as far as Montana.</p><p>This place will be a very productive one later after the death of our characters.</p>
+                </div>
+               <div class="step fade-in" data-step="12" data-location="JudithRiver02_Cope">
+                    <p>But there is nothing better than some good bones of the Canyons to keep this war going on.</p>
+                </div>
+               <div class="step right fade-in" data-step="13" data-location="Morrinson_Marsh">
+                    <p>In 1877, a school teacher and amateur paleontologist from Morrison CL, makes contact with both researchers.</p><p>Cope makes contact first...</p>
+                </div>
+               <div class="step right fade-in" data-step="14" data-location="Morrinson_Marsh">
+                    <p>... but Marsh, who is financially stronger, pays.</p><p>Even bones already in Cope's posession should be returned and sent to Marsh.</p>
+                </div>
+               <div class="step right fade-in" data-step="15" data-location="CanonCity01_Cope">
+                    <p>The same year Cope is contacted by bone hunters further south.</p>
+                </div>
+               <div class="step right fade-in" data-step="16" data-location="CanonCity02_Marsh">
+                    <p>The bone hunters also contacted Marsh, though. So he also make camps on the sites.</p><p>So far, trying to put out the other has been about paying to get the bones first, attacks to the reputations, and spying.</p><p>It is during this time where the teams from both camps begin to openly sabotage the activities of each other.<p>
+                </div>
+               <div class="step right fade-in" data-step="17" data-location="ComoBluff01_Cope">
+                    <p>But the area that will make a difference, specially for Marsh, is one he disregarded years before.</p><p>Marsh is contacted by two rail workers in the surroundings of Como Bluff. He sends Williston, one of his best assistances who is in Canyon City, to verify.</p><p>He talks of a big finding, but also confirms that Cope is already there and getting closer.<p>
+                </div>
+               <div class="step right fade-in" data-step="18" data-location="ComoBluff02_Marsh">
+                    <p>Marsh rapidly makes a favourable agreement with the rail workers, and begin the diggings.</p><p><strong>Como Bluff</strong> will be one of the most productive areas of all so far.</p>
+                </div>
                 <!-- Closing Note -->
-                <div class="step fade-in" data-step="6">
-                    <p>The locations are more than pins on a map—they're chapters in a saga of ambition, discovery, and scientific rivalry etched into the rock of the American West.</p>
+                <div class="step fade-in" data-step="18" data-location="ComoBluff02_Marsh">
+                    <p>Despite the amount of material, Marsh will extend instructions to his assistances to dynamite sites he considered "exhausted of interesting material", so Cope won't be able to put a hand of possible remainings.</p>
                 </div>
-
-                                <!-- Closing Note -->
-                <div class="fade-in" data-step="7" style="height:100px">
+                <!-- Closing Note -->
+                <div class="step fade-in" data-step="19" data-location="">
+                    <p>Closing Note.</p>
                 </div>
+                <div style="opacity: 0;"><p>NO CONTENT</p></div>
+                <div style="opacity: 0;"><p>NO CONTENT</p></div>
+                <div style="opacity: 0;"><p>NO CONTENT</p></div>
+                <div style="opacity: 0;"><p>NO CONTENT</p></div>
+                <div style="opacity: 0;"><p>NO CONTENT</p></div>
+                <div style="opacity: 0;"><p>NO CONTENT</p></div>
+                <div style="opacity: 0;"><p>NO CONTENT</p></div>
+                <div style="opacity: 0;"><p>NO CONTENT</p></div>
 
             </article>
         </section>
@@ -135,20 +206,20 @@
                 WEST : {
                     MARKERS : {
                         ComoLake_Marsh: L.marker([41.909779, -106.364129]).bindTooltip("Como Lake, 1868", {permanent: true, direction: 'top'}),
-                        Badlands_Marsh: L.marker([43.45, -102.30]).bindTooltip("Badlands, 1870", {permanent: true, direction: 'rigt'}),
-                        NiobaraChalk_Marsh: L.marker([42.747, -98.040]).bindTooltip("Niobara Chalk, 1870", {permanent: true, direction: 'rigt'}),
-                        Wallace_Marsh: L.marker([38.894155, -101.592892]).bindTooltip("Wallace, 1870", {permanent: true, direction: 'top'}),
-                        KansasWest01_Cope: L.marker([38.48, -100.56]).bindTooltip("Smoky Hill River, 1871", {permanent: true, direction: 'bottom'}),
-                        KansasWest02_Marsh: L.marker([38.48, -100.40]),
+                        Badlands_Marsh: L.marker([43.5, -103.6]).bindTooltip("Badlands, 1870", {permanent: true, direction: 'top'}),
+                        NiobaraChalk_Marsh: L.marker([42.747, -102.540]).bindTooltip("Niobara Chalk, 1870", {permanent: true, direction: 'top'}),
+                        Wallace_Marsh: L.marker([39.7, -102.0]).bindTooltip("Wallace, 1870", {permanent: true, direction: 'top'}),
+                        KansasWest01_Cope: L.marker([39., -101.56]).bindTooltip("Smoky Hill River, 1871", {permanent: true, direction: 'top'}),
+                        KansasWest02_Marsh: L.marker([39., -101.70]),
                         NewMexico_Cope: L.marker([36.205693, -105.184615]).bindTooltip("New Mexico, 1876", {permanent: true, direction: 'rigt'}),
                         Calendron_Cope: L.marker([34.821501, -100.963243]).bindTooltip("Calendron, 1876", {permanent: true, direction: 'rigt'}),
-                        JudithRiver01_Marsh:L.marker([34.821501, -100.963243]).bindTooltip("Judith River, 1876", {permanent: true, direction: 'rigt'}),
-                        JudithRiver02_Cope:L.marker([34.821501, -100.963243]),
-                        Morrinson_Marsh: L.marker([39.627762, -105.205718]).bindTooltip("Morrinson, 1877", {permanent: true, direction: 'rigt'}),
-                        CanonCity01_Cope: L.marker([38.530034, -105.207316]).bindTooltip("Canyon City, 1877", {permanent: true, direction: 'rigt'}),
-                        CanonCity02_Marsh: L.marker([38.540034, -105.07316]),
-                        ComoBluff01_Cope: L.marker([41.918585, -106.053964]).bindTooltip("Como Bluff, 1877", {permanent: true, direction: 'rigt'}),
-                        ComoBluff02_Marsh: L.marker([41.998585, -105.53964])
+                        //JudithRiver01_Marsh:L.marker([34.821501, -100.963243]).bindTooltip("Judith River, 1876", {permanent: true, direction: 'rigt'}),
+                        JudithRiver02_Cope:L.marker([47.663287, -109.430571]).bindTooltip("Judith River, 1876", {permanent: true, direction: 'rigt'}),
+                        Morrinson_Marsh: L.marker([40.027762, -105.305718]).bindTooltip("Morrinson, 1877", {permanent: true, direction: 'rigt'}),
+                        CanonCity01_Cope: L.marker([39.00034, -105.607316]).bindTooltip("Canyon City, 1877", {permanent: true, direction: 'rigt'}),
+                        CanonCity02_Marsh: L.marker([39.00034, -105.67316]),
+                        ComoBluff01_Cope: L.marker([41.918585, -106.053964]).bindTooltip("Como Bluff, 1877", {permanent: true, direction: 'top'}),
+                        ComoBluff02_Marsh: L.marker([41.958585, -105.93964])
                     },
                     IMAGES:{
                         ComoLake:{
@@ -171,11 +242,12 @@
 
             // loop through all elements
             document.querySelectorAll('.fade-in').forEach((elm, i)=>{
-                let tween = TweenMax.from(elm, 0.3, {autoAlpha: 0, scale: 0.5, y: '+=30', ease:Linear.easeNone});
+                let tween = TweenMax.from(elm, 0.3, {autoAlpha: 0, scale: 0.5, y: '+=30',  ease:Linear.easeNone});
                 let scene = new ScrollMagic.Scene({
                 triggerElement: elm,
                 duration: '40%',
-                triggerHook: .45
+                offset: '5%',
+                triggerHook: .55
             })
             .setTween(tween) // trigger a TweenMax.to tween
             .on('end', sceneHandler.bind(elm))
@@ -196,35 +268,110 @@
                
                 let lat, lng, zoom;
                 if(this.dataset.step === '0'){
-                    // parse lat and lng from the divs data attribute
-                    lat = latlng[0];
-                    lng = latlng[1];
-                    zoom = 10;
-                    // set the view
-                    if(lat !== undefined && lng !== undefined){
                         leafletMap.flyTo(COORDINATES.HADDONFIELD.CENTER, 11);
                         //COORDINATES.HADDONFIELD.POLYGON.addTo(leafletMap);
                         COORDINATES.HADDONFIELD.IMAGE.addTo(leafletMap);
                         COORDINATES.HADDONFIELD.MARKER.addTo(leafletMap);
-                    };
+
                 }else if(this.dataset.step === '1'){
-                    // parse lat and lng from the divs data attribute
-                    lat = latlng[0];
-                    lng = latlng[1];
-                    zoom = 10;
-                    if(lat !== undefined && lng !== undefined){
-                        leafletMap.flyTo(COORDINATES.WEST.CENTER, 6);
-                        //COORDINATES.HADDONFIELD.POLYGON.addTo(leafletMap);
-                        COORDINATES.WEST.IMAGE.addTo(leafletMap);
-                        //COORDINATES.WEST.MARKER.addTo(leafletMap);
-                        let markerKeys = Object.keys(COORDINATES.WEST.MARKERS);
-                        for(let key of markerKeys){
-                            let marker = COORDINATES.WEST.MARKERS[key].addTo(leafletMap);
-                            let who = key.split('_')[1];
-                            if(who == 'Cope') marker._icon.classList.add("cope-icon");
-                        }
-                    };
-                }else{
+                    leafletMap.flyTo(COORDINATES.WEST.CENTER, 6);
+                    COORDINATES.WEST.IMAGE.addTo(leafletMap);
+                }else if(this.dataset.step === '3'){
+                    let who = this.dataset.location.split('_')[1];
+                    //COORDINATES.WEST.MARKER.addTo(leafletMap);
+                    let marker = COORDINATES.WEST.MARKERS[this.dataset.location].addTo(leafletMap);
+                    if(who == 'Cope') marker._icon.classList.add("cope-icon");
+                    leafletMap.flyTo(marker.getLatLng(), 7);
+                }else if(this.dataset.step === '4'){
+                    let who = this.dataset.location.split('_')[1];
+                    //COORDINATES.WEST.MARKER.addTo(leafletMap);
+                    let marker = COORDINATES.WEST.MARKERS[this.dataset.location].addTo(leafletMap);
+                    if(who == 'Cope') marker._icon.classList.add("cope-icon");
+                    leafletMap.flyTo(marker.getLatLng(), 7);
+                }else if(this.dataset.step === '5'){
+                    let who = this.dataset.location.split('_')[1];
+                    //COORDINATES.WEST.MARKER.addTo(leafletMap);
+                    let marker = COORDINATES.WEST.MARKERS[this.dataset.location].addTo(leafletMap);
+                    if(who == 'Cope') marker._icon.classList.add("cope-icon");
+                    //leafletMap.flyTo(marker.getLatLng(), 7);
+                }else if(this.dataset.step === '6'){
+                    let who = this.dataset.location.split('_')[1];
+                    //COORDINATES.WEST.MARKER.addTo(leafletMap);
+                    let marker = COORDINATES.WEST.MARKERS[this.dataset.location].addTo(leafletMap);
+                    if(who == 'Cope') marker._icon.classList.add("cope-icon");
+                    leafletMap.flyTo(COORDINATES.WEST.CENTER, 6);
+                }else if(this.dataset.step === '7'){
+                    let who = this.dataset.location.split('_')[1];
+                    //COORDINATES.WEST.MARKER.addTo(leafletMap);
+                    let marker = COORDINATES.WEST.MARKERS[this.dataset.location].addTo(leafletMap);
+                    if(who == 'Cope') marker._icon.classList.add("cope-icon");
+                    leafletMap.flyTo(marker.getLatLng(), 7);
+                }else if(this.dataset.step === '8'){
+                    let who = this.dataset.location.split('_')[1];
+                    //COORDINATES.WEST.MARKER.addTo(leafletMap);
+                    let marker = COORDINATES.WEST.MARKERS[this.dataset.location].addTo(leafletMap);
+                    if(who == 'Cope') marker._icon.classList.add("cope-icon");
+                    //leafletMap.flyTo(marker.getLatLng(), 7);
+                }else if(this.dataset.step === '9'){
+                    leafletMap.flyTo(COORDINATES.WEST.CENTER, 6);
+                }else if(this.dataset.step === '10'){
+                    let who = this.dataset.location.split('_')[1];
+                    //COORDINATES.WEST.MARKER.addTo(leafletMap);
+                    let marker = COORDINATES.WEST.MARKERS[this.dataset.location].addTo(leafletMap);
+                    if(who == 'Cope') marker._icon.classList.add("cope-icon");
+                    leafletMap.flyTo(marker.getLatLng(), 5.5);
+                }else if(this.dataset.step === '11'){
+                    let who = this.dataset.location.split('_')[1];
+                    //COORDINATES.WEST.MARKER.addTo(leafletMap);
+                    let marker = COORDINATES.WEST.MARKERS[this.dataset.location].addTo(leafletMap);
+                    if(who == 'Cope') marker._icon.classList.add("cope-icon");
+                    leafletMap.flyTo(marker.getLatLng(), 5.5);
+                }else if(this.dataset.step === '12'){
+                    let who = this.dataset.location.split('_')[1];
+                    //COORDINATES.WEST.MARKER.addTo(leafletMap);
+                    let marker = COORDINATES.WEST.MARKERS[this.dataset.location].addTo(leafletMap);
+                    if(who == 'Cope') marker._icon.classList.add("cope-icon");
+                    leafletMap.flyTo(COORDINATES.WEST.CENTER, 5);
+                }else if(this.dataset.step === '13'){
+                    let who = this.dataset.location.split('_')[1];
+                    //COORDINATES.WEST.MARKER.addTo(leafletMap);
+                    let marker = COORDINATES.WEST.MARKERS[this.dataset.location];
+                    if(who == 'Cope') marker._icon.classList.add("cope-icon");
+                    leafletMap.flyTo(marker.getLatLng(), 8);
+                }else if(this.dataset.step === '14'){
+                    let who = this.dataset.location.split('_')[1];
+                    //COORDINATES.WEST.MARKER.addTo(leafletMap);
+                    let marker = COORDINATES.WEST.MARKERS[this.dataset.location].addTo(leafletMap);
+                    if(who == 'Cope') marker._icon.classList.add("cope-icon");
+                    //leafletMap.flyTo(marker.getLatLng(), 8);
+                }else if(this.dataset.step === '15'){
+                    let who = this.dataset.location.split('_')[1];
+                    //COORDINATES.WEST.MARKER.addTo(leafletMap);
+                    let marker = COORDINATES.WEST.MARKERS[this.dataset.location].addTo(leafletMap);
+                    if(who == 'Cope') marker._icon.classList.add("cope-icon");
+                    //leafletMap.flyTo(marker.getLatLng(), 8);
+                }else if(this.dataset.step === '16'){
+                    let who = this.dataset.location.split('_')[1];
+                    //COORDINATES.WEST.MARKER.addTo(leafletMap);
+                    let marker = COORDINATES.WEST.MARKERS[this.dataset.location].addTo(leafletMap);
+                    if(who == 'Cope') marker._icon.classList.add("cope-icon");
+                    //leafletMap.flyTo(marker.getLatLng(), 8);
+                }else if(this.dataset.step === '17'){
+                    let who = this.dataset.location.split('_')[1];
+                    //COORDINATES.WEST.MARKER.addTo(leafletMap);
+                    let marker = COORDINATES.WEST.MARKERS[this.dataset.location].addTo(leafletMap);
+                    if(who == 'Cope') marker._icon.classList.add("cope-icon");
+                    leafletMap.flyTo(marker.getLatLng(), 8);
+                }else if(this.dataset.step === '18'){
+                    let who = this.dataset.location.split('_')[1];
+                    //COORDINATES.WEST.MARKER.addTo(leafletMap);
+                    let marker = COORDINATES.WEST.MARKERS[this.dataset.location].addTo(leafletMap);
+                    if(who == 'Cope') marker._icon.classList.add("cope-icon");
+                    //leafletMap.flyTo(marker.getLatLng(), 8);
+                }else if(this.dataset.step === '19'){
+                   //COORDINATES.WEST.MARKER.addTo(leafletMap);
+                    leafletMap.flyTo(COORDINATES.WEST.CENTER, 5);
+                }else if(this.dataset.step !== '2'){
                     leafletMap.flyTo([51.505, -0.09], 8);
                 };
 
