@@ -6,7 +6,22 @@ https://www.youtube.com/watch?v=erwczioi9us
 
 * http://mikesirota.com/who-won-the-bone-wars/
 * https://www.ebsco.com/research-starters/history/bone-wars
-* https://www.levins.com/bwars.shtml (very good)
+
+#### Best general references so far...
+
+marsh / cope expeditions <place>
+Pierre Shale location nebraska
+oc marsh trips to the west
+
+* https://www.levins.com/bwars.shtml
+* https://interestingengineering.com/culture/bone-wars-the-marsh-cope-feud-and-its-dinosaur-discoveries
+* https://coconote.app/notes/9638aa23-e573-4e00-8889-c0a00347499c
+* https://www.jstor.org/stable/3623983?seq=1
+* https://pubs.geoscienceworld.org/hess/earth-sciences-history/article-abstract/13/2/138/615188/S-W-WILLISTON-AND-THE-EXPLORATION-OF-THE-NIOBRARA?redirectedFrom=fulltext
+* https://nebraskapublicmedia.org/en/series-media/non-series-video/paleo-sleuths-50001578/oc-marsh/#:~:text=In%201870%2C%201871%2C%201872%2C,American%20pterosaur%20fossil%20in%201871.
+
+**Interesting perspective...**
+* https://www.nationalgeographic.com/science/article/battle-for-the-bone-wars-beasts
 
 ### Trips
 
@@ -23,7 +38,7 @@ Cope --- 1871 --- West Kansas (Kansas)
 Marsh --- 1872 --- Smoky River (Kansas) 
 Cope --- 1873 --- Titanothere Beds of Colorado
 Cope --- 1874 --- New Mexico
-Cope --- 1876 --- Judy River (Montana) <big_sauropod> (https://www.science.org/doi/10.1126/science.40.1021.134)
+Cope --- 1876 --- Judy River, Fort Benton (Montana) <big_sauropod> (https://www.science.org/doi/10.1126/science.40.1021.134)
 Cope --- 1976 --- Calendron Beds (Texas)
 Marsh --- 1877-1886 --- Note from A. Lakes (Denver) quarry of discoveries in Morrison (Colorado) <Atlantosaurus>
 Cope --- 1877-1886 --- same than above, but late to the negotiation
@@ -80,6 +95,10 @@ cope dino naming success rate
 * https://www.researchgate.net/publication/228505291_Naming_Dinosaur_Species_The_Performance_of_Prolific_Authors
 
 ### Techniques
+
+#### Converting extensions images
+
+* https://www.adobe.com/express/feature/image/convert/jpg-to-png
 
 #### Image manipulation and Animation (Krita, GIMP)
 
@@ -178,9 +197,13 @@ https://github.com/janpaepke/ScrollMagic
 
 * https://webflow.com/made-in-webflow/scrollmagic
 
+###### Issues
+
+* https://github.com/janpaepke/ScrollMagic/issues/378
+* https://css-tricks.com/forums/topic/scrollmagic-centers-pinned-object/
 * https://github.com/janpaepke/ScrollMagic/issues/378
 
-* Examples: 
+###### Examples: 
   * https://scrollmagic.io/examples/basic/debugging.html
   * https://github.com/janpaepke/ScrollMagic/blob/master/assets/css/examples.css
   * https://github.com/janpaepke/ScrollMagic/blob/master/examples/basic/debugging.html
@@ -263,9 +286,16 @@ Consider the context: Think about what kind of text you're using the font for (h
 
 * https://vintagedancer.com/victorian/1890s-1900s-fashion/
 
+vintage yellow newspaper hex css
+* https://encycolorpedia.com/e7cf8a
+* https://www.color-hex.com/color-palette/115791
+* https://www.color-hex.com/color-palette/113030
+
 #### Typography
 
 1870 newspaper
+1800 newspaper typography google fonts
+old western typography google fonts
 
 ##### font example
 * https://www.abebooks.com/paper-collectibles/Town-Stage-1870-San-Francisco-old/22658665106/bd
@@ -317,6 +347,20 @@ get svg vector image map morrison formation
 * https://ngmdb.usgs.gov/topoview/viewer/#11/39.7646/-105.2560
 
 vintage map colorado kansas wyoming
+west map 1880 colorado nebraska wyoming kansas
+
+* https://www.americanrivers.org/river/niobrara-river/
+
+#### CURRENT SOURCES:
+
+* https://www.raremaps.com/gallery/detail/0104dd/wyoming-nebraska-kansas-dakota-colorado-and-montana-rand-mcnally-company
+* https://thevintagemapshop.com/products/vintage-map-the-province-of-new-jersey-1778
+* https://bostonraremaps.com/wp-content/uploads/2015/08/brm1890-faden-new-jersey-1778-750x1024.jpg
+* https://bostonraremaps.com/inventory/the-finest-18th-century-map-of-new-jersey/
+
+#### Other of interest...
+
+* https://www.americanrivers.org/wp-content/uploads/2022/12/Map_Missouri-River_wikimedia.jpg
 
 ### Locations of the Feud
 
@@ -346,15 +390,32 @@ https://www.historycolorado.org/story/2024/09/06/fire-boneyard
 
 After receiving word of the site, both Cope and Marsh scrambled to control fossil flow. Marsh bribed Lakes to keep Cope out, beginning the most public phase of the Bone Wars
 
+morrison colorado 1880 map
+morrison colorado 1880 images
+
 * [Map of Morrison Formation, Wikipedia](https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Stratotypes_for_members_of_the_Morrison_Formation.jpg/800px-Stratotypes_for_members_of_the_Morrison_Formation.jpg)
 * Morrison Formation, Wikipedia (https://en.wikipedia.org/wiki/Morrison_Formation)
 * https://dinodata.de/fundort/morrison_formation.php
+* https://www.reddit.com/r/ColoradoHistory/comments/15hoecy/historic_photos_of_morrison_colorado_1870s1890s/
 
 #### Smoky Hill River (Kansas) 1871-72
 
 * https://en.wikipedia.org/wiki/Smoky_Hill_Chalk
 * [Map of Smoky Hill in the Morrison Formation complex](https://www.kgs.ku.edu/Publications/Bulletins/162/03_strat_b.html)
 * https://earthathome.org/hoe/sc/fossils-gp/
+
+#### Fort Bridger (Wyoming) 1871
+
+* https://coconote.app/notes/9638aa23-e573-4e00-8889-c0a00347499c
+
+#### Niobara River (Nebraska), Toadstool Geologic Park (Nebraska)
+
+Niobrara river valley map 1880
+* https://www.nps.gov/niob/learn/nature/geologicformations.htm
+* https://earthobservatory.nasa.gov/images/88094/niobrara-national-scenic-river
+
+badlands of nebraska
+* https://en.wikipedia.org/wiki/Toadstool_Geologic_Park 
 
 #### Niobrara Chalk (Kansas) 1870
 
@@ -463,6 +524,11 @@ https://github.com/Leaflet/Leaflet
 #### drawing polygons, icons, markers and tooltips, and removing them
 
 * https://stackoverflow.com/questions/23567203/leaflet-changing-marker-color
+* https://leafletjs.com/reference.html#icon
+
+leaflet color marker
+* https://stackoverflow.com/questions/23567203/leaflet-changing-marker-color
+* https://hungchienhsiang.medium.com/super-simple-way-to-change-leaflet-marker-color-7efd0996c797
 
 leaflet providers how to remove roads and cities
 
@@ -474,8 +540,10 @@ leaflet providers how to remove roads and cities
 
 #### overlay images; adding images
 
+* https://leafletjs.com/examples/overlays/
 * https://www.youtube.com/watch?v=12GC3iA84HY&t=4s
 * https://stackoverflow.com/questions/66572730/how-to-show-an-image-and-a-link-on-a-popup-when-clicking-on-a-leaflet-marker
+* https://stackoverflow.com/questions/61954320/how-to-modify-the-opacity-from-an-image-in-my-leaflet-code
 
 ##### providers; Stadia
 
@@ -520,23 +588,7 @@ how to make a chart represented by human icons
 * https://eagereyes.org/blog/2013/isotype
 
 
-                    let who = this.dataset.location.split('_')[0];
-                       
 
-                        
-                        //COORDINATES.HADDONFIELD.POLYGON.addTo(leafletMap);
-                        COORDINATES.WEST.IMAGE.addTo(leafletMap);
-                        //COORDINATES.WEST.MARKER.addTo(leafletMap);
-                        let marker = COORDINATES.WEST.MARKERS['ComoLake'].addTo(leafletMap);
-                        let who = key.split('_')[1];
-                        if(who == 'Cope') marker._icon.classList.add("cope-icon");
-                        let markerKeys = Object.keys(COORDINATES.WEST.MARKERS);
-                        for(let key of markerKeys){
-                            let marker = COORDINATES.WEST.MARKERS[key].addTo(leafletMap);
-                            let who = key.split('_')[1];
-                            if(who == 'Cope') marker._icon.classList.add("cope-icon");
-                        }
-                    };
 
 
 
