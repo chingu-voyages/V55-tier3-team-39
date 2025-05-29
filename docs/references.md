@@ -19,6 +19,8 @@ oc marsh trips to the west
 * https://www.jstor.org/stable/3623983?seq=1
 * https://pubs.geoscienceworld.org/hess/earth-sciences-history/article-abstract/13/2/138/615188/S-W-WILLISTON-AND-THE-EXPLORATION-OF-THE-NIOBRARA?redirectedFrom=fulltext
 * https://nebraskapublicmedia.org/en/series-media/non-series-video/paleo-sleuths-50001578/oc-marsh/#:~:text=In%201870%2C%201871%2C%201872%2C,American%20pterosaur%20fossil%20in%201871.
+* https://www.science.org/doi/10.1126/science.40.1021.134
+* https://www.historycolorado.org/story/2024/09/06/fire-boneyard
 
 **Interesting perspective...**
 * https://www.nationalgeographic.com/science/article/battle-for-the-bone-wars-beasts
@@ -157,6 +159,15 @@ With a scientific focus / data:
 * FlowingData
 * (similars)
 
+#### Emotion Modifiers
+
+
+
+* https://facepoke.net/playground
+  * Modify the image into one of full of joy. Make only modifications of the expressions of the eyes and mouth without changing other elements of the face like the beard or the mustache.
+  * Modify the image into a smiling one. Focus on modifications of the eyes and mouth with soft modifications of the surrounding elements of the face like the beard or the mustache. Any added color should be in black and white.
+  image preservation: 4.1 - 4.5 / 3.9 - 4.1
+  Instruction Following Strength 5 - 6
 
 #### Video
 
