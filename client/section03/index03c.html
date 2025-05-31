@@ -17,6 +17,7 @@ h1{
   background-color: #444;
   color: #fff;
 }
+
 .question{
   font-size: 30px;
   margin-bottom: 10px;
@@ -60,17 +61,43 @@ button:hover{
   z-index: 2;
 }
 .quiz-container{
-  position: relative;
-  height: 200px;
+  position:relative;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
   margin-top: 40px;
 }
 
+#quiz{
+  height: 500px;
+}
+
+
 /* Three image containers (use 25% for four, and 50% for two, etc) */
-.column {
+.column{
   float: left;
-  width: 50%;
   padding: 5px;
 }
+
+.column.copeImg {
+  width: 45%;
+  margin-left: 3%;
+}
+
+.column.marshImg {
+  width: 45%;
+  margin-left: 3%;
+}
+
+.row{
+    overflow: auto; 
+}
+
+.row.ratio-buttons{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+  
 
 /* Clear floats after image containers */
 .row::after {
@@ -83,30 +110,56 @@ button:hover{
   max-width: 200px;
   border-radius: 5px;
 }
+
+#marshImg{
+  max-height: 258px;
+}
+
+#next{
+  display: none;
+}
+
+#submit{
+  display: none;
+}
+
+.explanation{
+  display: none;
+}
+
 </style>
-  <div class="row">
-    <div class="column copeImg">
-      <!--<img class="img-quiz" src="../assets/img/Cope_Edward_Drinker_1840-1897.jpg" alt="Cope image">-->
-      <img class="img-quiz" src="../assets/img/happy cope.webp" alt="Marsh image">
+  <div class="quiz-container">
+    <div id="quiz"></div>
+      <!--<button id="previous">Previous Question</button>-->
+    <div id="quiz-buttons">
+      <button id="next">Next Question</button>
+      <button id="submit">Submit Quiz</button>
     </div>
-    <div class="colum marshImg">
-      <!--<img class="img-quiz" src="../assets/img/Othniel_Charles_Marsh_-_Brady-Handy.jpg" alt="Marsh image">-->
-      <img class="img-quiz" src="../assets/img/sad marsh.webp" alt="Marsh image">
-    </div>
+    <div id="results"></div>
   </div>
-<div class="quiz-container">
-  <div id="quiz"></div>
-</div>
-<button id="previous">Previous Question</button>
-<button id="next">Next Question</button>
-<button id="submit">Submit Quiz</button>
-<div id="results"></div>
 <script>
 (function(){
   // Functions
+  // This function only builds the VIEW
   function buildQuiz(){
     // variable to store the HTML output
     const output = [];
+    const imgUrlSet = {
+      cope: {
+        sad: '../assets/img/sad cope.webp',
+        angry: '../assets/img/angry cope.webp',
+        normal: '../assets/img/Cope_Edward_Drinker_1840-1897.jpg',
+        happy: '../assets/img/happy cope.webp'
+      },
+      marsh: {
+        sad: '../assets/img/sad marsh.webp',
+        angry: '../assets/img/angry marsh.webp',
+        normal: '../assets/img/Othniel_Charles_Marsh_-_Brady-Handy.jpg',
+        happy: '../assets/img/happy marsh.webp'
+      },
+    };
+
+    const imgCurrent = [imgUrlSet.cope.normal, imgUrlSet.marsh.normal];
 
     // for each question...
     myQuestions.forEach(
@@ -126,7 +179,6 @@ button:hover{
           answers.push(
             `<label>
               <input type="radio" name="question${questionNumber}" value="${letter}"/>
-              ${letter} :
               ${currentQuestion.answers[letter]}
             `
           );
@@ -136,14 +188,34 @@ button:hover{
         output.push(
           `<div class="slide">
             <div class="question"> ${currentQuestion.question} </div>
-            <div class="answers"> ${answers.join("")} </div>
+            <div class="row img-questions">
+              <div class="column copeImg">
+                <img id="copeImg" class="img-quiz" src="${imgCurrent[0]}" alt="cope image">
+              </div>
+              <div class="column marshImg">
+                <img id="marshImg" class="img-quiz" src="${imgCurrent[1]}" alt="marsh image">
+              </div>
+            </div>
+            <div class="row ratio-buttons">
+              <div class="column">
+                <div class="answers">${answers[0]} </div>
+              </div>
+              <div class="column">
+                <div class="answers">${answers[1]} </div>
+              </div>
+            </div>
+            
+
+            <div id="explanation${questionNumber}" class="explanation"> ${currentQuestion.explanation} </div>
           </div>`
         );
       }
     );
-
+    //<div class="answers"> ${answers.join("")} </div>
     // finally combine our output list into one string of HTML and put it on the page
     quizContainer.innerHTML = output.join('');
+    //console.log(1111, quizContainer.children[0].offsetHeight);
+    //quizContainer.style.height = quizContainer.children[0].offsetHeight;
   }
 
   function showResults(){
@@ -186,10 +258,10 @@ button:hover{
     slides[n].classList.add('active-slide');
     currentSlide = n;
     if(currentSlide === 0){
-      previousButton.style.display = 'none';
+      //previousButton.style.display = 'none';
     }
     else{
-      previousButton.style.display = 'inline-block';
+      //previousButton.style.display = 'inline-block';
     }
     if(currentSlide === slides.length-1){
       nextButton.style.display = 'none';
@@ -202,12 +274,15 @@ button:hover{
   }
 
   function showNextSlide() {
+    document.querySelectorAll('.explanation').forEach((v,i)=>{
+      v.style.display = 'none';
+    })
     showSlide(currentSlide + 1);
   }
 
-  function showPreviousSlide() {
-    showSlide(currentSlide - 1);
-  }
+  //function showPreviousSlide() {
+  //  showSlide(currentSlide - 1);
+  //}
 
   // Variables
   const quizContainer = document.getElementById('quiz');
@@ -215,33 +290,50 @@ button:hover{
   const submitButton = document.getElementById('submit');
   const myQuestions = [
     {
-      question: "Who invented JavaScript?",
+      question: "Who came from the most humble background?",
       answers: {
-        a: "Douglas Crockford",
-        b: "Sheryl Sandberg",
-        c: "Brendan Eich"
+        a: 'Cope',
+        b: 'Marsh'
       },
-      correctAnswer: "c"
+      correctAnswer: "b",
+      explanation: "Lorem ipsum dolor sit amet."
     },
     {
-      question: "Which one of these is a JavaScript package manager?",
+      question: "Who found the most dinosaurs?",
       answers: {
-        a: "Node.js",
-        b: "TypeScript",
-        c: "npm"
+        a: 'Cope',
+        b: 'Marsh'
       },
-      correctAnswer: "c"
+      correctAnswer: "b",
+      explanation: "Lorem ipsum dolor sit amet."
     },
     {
-      question: "Which tool can you use to ensure code quality?",
+      question: "Who wrote more articles?",
+      correctAnswer: "a",
       answers: {
-        a: "Angular",
-        b: "jQuery",
-        c: "RequireJS",
-        d: "ESLint"
+        a: 'Cope',
+        b: 'Marsh'
       },
-      correctAnswer: "d"
-    }
+      explanation: "Lorem ipsum dolor sit amet."
+    },
+    {
+      question: "Who got wrong the classification the most?",
+      answers: {
+        a: 'Cope',
+        b: 'Marsh'
+      },
+      correctAnswer: "a",
+      explanation: "Lorem ipsum dolor sit amet."
+    },
+    {
+      question: "Who of them invited the other to donate their bodies to science so their brains could be measured?",
+      answers: {
+        a: 'Cope',
+        b: 'Marsh'
+      },
+      correctAnswer: "a",
+      explanation: "Lorem ipsum dolor sit amet."
+    },    
   ];
 
   // Kick things off
@@ -257,8 +349,19 @@ button:hover{
   showSlide(currentSlide);
 
   // Event listeners
+  document.querySelectorAll("input[type='radio']").forEach(function(element) {
+    element.onclick = function(e) {
+      //alert("Click detected in button #" + element.value);
+      showResults();
+      document.querySelectorAll('.explanation').forEach((v,i)=>{
+          v.style.display = 'inline-block';
+      })
+      
+  }
+  });
+
   submitButton.addEventListener('click', showResults);
-  previousButton.addEventListener("click", showPreviousSlide);
+  //previousButton.addEventListener("click", showPreviousSlide);
   nextButton.addEventListener("click", showNextSlide);
 })();
 
