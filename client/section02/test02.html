@@ -7,7 +7,9 @@
         <link href="https://fonts.googleapis.com/css2?family=IM+Fell+English:ital@0;1&family=Rye&display=swap" rel="stylesheet">
         <!-- Make sure you put this AFTER Leaflet's CSS -->
         <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
-        <script src="https://unpkg.com/leaflet-providers@latest/leaflet-providers.js"></script> 
+        <script src="https://unpkg.com/leaflet-providers@latest/leaflet-providers.js"></script>
+        <script src="../assets/js/leaflet-sidebar.js"></script>
+        <link rel="stylesheet" href="../assets/style/leaflet-sidebar.css"></link>
     <style>
 
 
@@ -83,11 +85,37 @@
             filter: hue-rotate(120deg);
         }
 
+        #sidebar{
+            position: fixed;
+            left: 50px;
+            bottom: 50px;
+            height: 90%;
+            /*width: auto;*/
+        }
+
     </style>
     <body>
         <section class="section02">
+            <div id="sidebar" class="sidebar collapsed">
+                <div class="sidebar-tabs">
+                    <ul role="tablist">
+                         <li><a href="#home" role="tab"><i class="fa fa-bars"></i></a></li>
+                    </ul>
+                </div>
+                <div class="sidebar-content">
+                    <div class="sidebar-pane" id="home">
+                        <h1 class="sidebar-header">
+                            sidebar-v2
+                            <span class="sidebar-close"><i class="fa fa-caret-left"></i></span>
+                        </h1>
+
+                        <!--<p id="sidebar-content">A responsive sidebar for mapping libraries like <a href="http://leafletjs.com/">Leaflet</a> or <a href="http://openlayers.org/">OpenLayers</a>.</p>-->
+
+                    </div>
+                </div>
+            </div>
             <div id="map-background"></div>
-            <article class="scrolly">
+             <article class="scrolly">
                 <div class="step fade-in" data-step="0">
                     <!--<p style="color:red;"><strong>COMMENT: STEPS DON'T SHOW, SCROLLING EFFECT STILL NOT WORKING. SEE HTML. SCROLLING LIKE SCROLLAMA, LIKELY NAVIGATING A MAP IN BACKGROUND </strong> </p><p>(https://codepen.io/jqyu/pen/aOxxwX, https://codepen.io/jqyu/pen/aOxxwX)</p>-->
                     <h2 class="title">The Conquest of the (Fossilized...) West</h2>
@@ -119,7 +147,7 @@
                     <img src="https://www.nps.gov/niob/learn/nature/images/High_cliff_seeps.JPG?maxwidth=650&autorotate=false&quality=78&format=webp" style="position:relative; width:100%; filter: sepia(3)" alt="https://www.nps.gov/niob/learn/nature/geologicformations.htm"/>
                 </div>
                 <div class="step left fade-in" data-step="6" data-location="Wallace_Marsh">
-                    <p>... and Kansas.</p>
+                    <p>... and Kansas <button type="button" onclick="openSidebar()" style="display:inline-block;">(Marsh's fossils)</button>.</p>
                 </div>
                 <div class="step fade-in" data-step="6" data-location="Wallace_Marsh">
                     <img src="../assets/img/WallaceBluffs.jpg" style="position:relative; width:100%; filter: sepia(3)" alt="https://www.flickr.com/photos/konzadocent/50082767431"/>
@@ -215,6 +243,8 @@
             //L.tileLayer.provider('Esri.WorldShadedRelief').addTo(leafletMap);
             L.tileLayer.provider('OpenStreetMap.HOT').addTo(leafletMap);
 
+            var sidebar = L.control.sidebar('sidebar').addTo(leafletMap);
+
             //const copeIcon = L.divIcon({className:'cope-icon'});
             const copeIcon = L.divIcon({className:'cope-icon'})
 
@@ -267,13 +297,13 @@
                 let tween = TweenMax.from(elm, 0.3, {autoAlpha: 0, scale: 0.5, y: '+=30',  ease:Linear.easeNone});
                 let scene = new ScrollMagic.Scene({
                 triggerElement: elm,
-                duration: '40%',
-                offset: '5%',
-                triggerHook: .55
+                duration: '90%', // use all the time possible on the screen before the next can enter
+                offset: '40%',
+                triggerHook: .95 // low the trigger as much as possible so changes on the position of the scene channel are not noticed
             })
             .setTween(tween) // trigger a TweenMax.to tween
             .on('end', sceneHandler.bind(elm))
-            .setPin(`[data-step = "${elm.dataset.step}"]`)
+            .setPin(`[data-step = "${elm.dataset.step}"]`) // it moves the whole scene channel; in order not to see the points I have to wait for one scene to leave before the next scene enters
             .addIndicators()
             .addTo(controller);
             });
@@ -396,9 +426,28 @@
                 }else if(this.dataset.step !== '2'){
                     leafletMap.flyTo([51.505, -0.09], 8);
                 };
+            };
 
+            function openSidebar(e){
+                let sidebarContent = document.getElementsByClassName('sidebar-pane')[0];
+                if(document.getElementById('sidebar-content')) sidebarContent.removeChild(document.getElementById('sidebar-content'));
+                let html =   `<div id="sidebar-content">
+                    <p style="color:red;"><strong>COMMENT: STEPS DON'T SHOW, SCROLLING EFFECT STILL NOT WORKING. SEE HTML. SCROLLING LIKE SCROLLAMA, LIKELY NAVIGATING A MAP IN BACKGROUND </strong> </p>
+                    <figure style="width:400px;">
+                        <img style="width:300px; object-fit:cover;" src='https://upload.wikimedia.org/wikipedia/commons/8/80/Ornithochirus_umbrosus.jpg'>
+                        <figurecaption>Pterosaurus</figurecaption>
+                    </figure>
+                </div>
+                `;
 
+                let nodeDocument = new DOMParser().parseFromString(html, 'text/html');
+                sidebarContent.appendChild(nodeDocument.body.firstChild);
 
+                document.querySelector('#sidebar').classList.remove('collapsed');
+                sidebarContent.classList.add('active');
+
+            
+            //    sidebar.open;
             }
         </script>
         <script></script>
