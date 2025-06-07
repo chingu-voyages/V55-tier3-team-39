@@ -102,11 +102,37 @@ function initStage(images) {
         image: imageObj,
         x: out.x,
         y: out.y,
+        opacity: 1.,
+       });
+
+      outline.on('click', ()=>{
+        //console.log(outline);
+        //console.log(animalLayer.find('_id'));
+        console.log(outline._id);
+        //console.log(animalLayer.children);
+        for(let outIndex in animalLayer.children){
+            let out = animalLayer.children[outIndex];
+            if(out._id != outline._id){
+                if(out.opacity() === 1.0){
+                    if((outline._id != 5 && out._id != 6) || outline._id == 5){
+                        out.opacity(0);
+                    };
+                    out.listening(false);
+                }else{
+                    out.opacity(1.0);
+                    out.listening(true);
+                }
+            }
+
+
+        }
+
       });
 
       animalLayer.add(outline);
     })();
   }
+
 
   stage.add(background);
   stage.add(animalLayer);
