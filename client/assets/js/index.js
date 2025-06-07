@@ -2,6 +2,7 @@
 const addedH = 50;
 const proport = 2;
 const originalImgSize = 1200;
+const longTextSpacing = ' '.repeat(32);
 
 const stage = new Konva.Stage({
   container: 'container',
@@ -22,7 +23,6 @@ const outlines = {
  dino_black: {
     x: 690/proport,
     y: 400/proport + addedH,
-    text: `They both count as the most prolific\npaleontologists. Marsh made the \nmost of the contributions, with \nmore than 30 new species of dinosaurs.\n Although Cope only counted 3 valid classifications,\n he was better known for contributions to ichtiology and herpetology.`,
   },
    desk_black: {
     x: 0,
@@ -31,33 +31,65 @@ const outlines = {
    craneo_black: {
     x: 200/proport,
     y: 370/proport + addedH,
-    text: `Both had distorded views about the evolution\nof humans. Marsh took bones from native american graves\nto verify if they were less evolved that white men.\nCope (and probably Marsh too) believed that brain size was\nrelated to intelligence. Actually, before dying he donated\nhis body to science not without challenging Marsh to do the same,\nto let others measure their brains and prove who was the most intelligent of both.\n\nMarsh didn't do that.`,
   },
    paper_black: {
     x: 60/proport,
     y: 570/proport + addedH,
-    text: `Cope was the most prolifc author, with around 1500 papers\nwith vivid descriptions of his findings. Marsh was less prolific but more systematic\nin his descriptions.\nMarsh had an enourmous impact on the scientific development\nof the paleontology, but Cope had a big influence in our view of\nthe pre-historic environment.`,
   },
    bone_black: {
     x: 400/proport,
     y: 170/proport + addedH,
-    text: `One of the bad consequences of the war\n was the number of errors they made while\nrushing their classifications.\nCope was who got it wrong most of the times.\nFrom 30 classifications of "new to science", only 3 are currently valid.\nMarsh made 58 classifications but got 20 wrong.`,
   },
    book_black: {
     x: 0,
     y: 430/proport + addedH,
-    text:``
   },
 
 };
 
 const facts = {
-    6: `Marsh and Cope count as the most prolific\npaleontologists of the XIX century. Marsh made the \nmost of the contributions, with \nmore than 30 new species of dinosaurs.\n Although Cope only counted 3 valid \nclassifications, he was better known \nfor contributions \nto ichtiology and herpetology.`,
-    7: ``,
-    8: `Both had distorded views about the evolution\nof humans. Marsh took bones from native american graves\nto verify if they were less evolved that white men.\nCope (and probably Marsh too) believed that brain size was\nrelated to intelligence. Actually, before dying he donated\nhis body to science not without challenging Marsh to do the same,\nto let others measure their brains and prove who was the most intelligent of both.\n\nMarsh didn't do that.`,
-    9: `Cope was the most prolifc author, with around 1500 papers\nwith vivid descriptions of his findings. Marsh was less prolific but more systematic\nin his descriptions.\nMarsh had an enourmous impact on the scientific development\nof the paleontology, but Cope had a big influence in our view of\nthe pre-historic environment.`,
-    10: `One of the bad \nconsequences of the\n war was the number of \nerrors they made while\nrushing their\nclassifications. Cope \nwas who got it wrong\nmost of the times.\nFrom 30 "new to \nscience" classifications,\n only 3 are currently \nvalid.\nMarsh made 58\nclassifications but got\n    20 wrong.`,
-    11: ``
+    6: {
+      text:`Marsh and Cope count as the most prolific\npaleontologists of the XIX century. Marsh made the \nmost of the contributions, with \nmore than 30 new species of dinosaurs.\n\nAlthough Cope only counted 3 valid \nclassifications, he was better known \nfor contributions \nto ichtiology and herpetology.`,
+      coords:{
+        x:0,
+        y:200,
+      }
+    },
+    7: {
+      text:``,
+      coords:{
+        x:0,
+        y:0
+      }
+    },
+    8: {
+      text:`Both had distorded views about the \nevolution of humans. Marsh took bones\nfrom native American graves to verify if \nthey were less evolved that white men.\n\n${longTextSpacing}Cope (and probably\n${longTextSpacing}Marsh too) believed\n${longTextSpacing}that brain size was\n${longTextSpacing}related to intelligence.\n${longTextSpacing}Actually, before dying\n${longTextSpacing}Cope donated his body\n${longTextSpacing}to science not without\n${longTextSpacing}challenging Marsh to\n${longTextSpacing}  do the same, to let\n${longTextSpacing}   others measure their\n${longTextSpacing}   brains and determine\n${longTextSpacing}  who was the smartest\n${longTextSpacing}   of the two.\n\n                         Marsh declined the offer.`,
+      coords:{
+        x: 180,
+        y: 135
+      }
+    },
+    9: {
+      text: `Cope was the most prolifc author, with\naround 1500 papers with vivid\ndescriptions of his findings.\nMarsh was less prolific but more\n${longTextSpacing} systematic in his\n${longTextSpacing}descriptions.\n\n${longTextSpacing}  Marsh had an\n${longTextSpacing} enourmous impact\n${longTextSpacing} on the scientific\n${longTextSpacing} development of\n${longTextSpacing} paleontology,\n${longTextSpacing} but Cope had a big\n${longTextSpacing}    influence in our\n${longTextSpacing}   view of pre-historic\n${longTextSpacing}   environments.`,
+      coords:{
+        x: 180,
+        y: 150
+      }
+    },
+    10: {
+      text:`One of the bad \nconsequences of the\n war was the number of \nerrors they made while\nrushing their\nclassifications. Cope \nwas who got it wrong\n most of the times.\n From 30 "new to \n science" classifications,\n only 3 are currently \n valid.\n\n Marsh made 58\n    classifications but got\n     20 wrong.`,
+      coords:{
+        x:355,
+        y:120,
+      }
+    },
+    11: {
+      text:``,
+      coords:{
+        x:0,
+        y:0
+      }
+    },
 }
 
 
@@ -78,11 +110,9 @@ background.add(messageText);
 // create message text
 const messageText02 = new Konva.Text({
   text: '',
-  //x:0,
-  //y: 200,
-  x: 355,
-  y:120,
-  fontSize: 25,
+  x: 0,
+  y: 0,
+  fontSize: 50/proport,
   fontFamily: 'Calibri',
   fill: 'white',
   //align: 'center',
@@ -92,8 +122,10 @@ const messageText02 = new Konva.Text({
 
 background.add(messageText02);
 
-function updateMessage(text) {
+function updateMessage(text, coords) {
   messageText02.text(text);
+  messageText02.x(coords.x);
+  messageText02.y(coords.y);
 }
 
 const images = {};
@@ -139,7 +171,7 @@ function initStage(images) {
       outline.on('click', ()=>{
         //console.log(outline);
         //console.log(animalLayer.find('_id'));
-        console.log(outline._id);
+        //console.log(outline._id);
         //console.log(animalLayer.children);
         for(let outIndex in animalLayer.children){
             let out = animalLayer.children[outIndex];
@@ -149,17 +181,14 @@ function initStage(images) {
                         out.opacity(0);
                     };
                     out.listening(false);
-                    updateMessage(facts[outline._id]);
                 }else{
                     out.opacity(1.0);
                     out.listening(true);
-                    updateMessage();
                 }
             }
-
-
         }
-
+        console.log(messageText02.text());
+        messageText02.text() == ''? updateMessage(facts[outline._id].text, facts[outline._id].coords): updateMessage('', {x:0, y:0});
       });
 
       animalLayer.add(outline);
