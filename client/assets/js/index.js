@@ -213,4 +213,4 @@ const sources = {
 };
 
 // Demo warning: You'll need local image files for this demo to work
-loadImages(sources, initStage);
+window.onload = () => loadImages(sources, initStage);
