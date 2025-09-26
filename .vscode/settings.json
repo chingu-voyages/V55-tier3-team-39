@@ -1,0 +1,17 @@
+{
+	"editor.fontSize": 13.5,
+	"workbench.statusBar.visible": true,
+	"editor.hover.enabled": false,
+	"gitlens.currentLine.enabled": false,
+	"terminal.integrated.fontSize": 13.5,
+	"terminal.integrated.fontWeight": "100",
+	"terminal.integrated.fontWeightBold": "600",
+	"editor.formatOnSave": true,
+	"gitlens.codeLens.enabled": false,
+	"workbench.activityBar.location": "hidden",
+	"terminal.integrated.defaultProfile.windows": "Git Bash", //https://code.visualstudio.com/docs/terminal/profiles
+	"[svelte]": {
+		"workbench.editor.languageDetection": false
+	},
+	"typescript.enablePromptUseWorkspaceTsdk": false
+}
