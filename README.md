@@ -9,16 +9,16 @@ The project was originally inspired by [The Pudding](https://pudding.cool/) form
 > Bear in mind that this project is very far from achieving the level of quality and refinement as the projects that inspired it
 
 During the exploration there were several frameworks that were on the repository as now deleted branches. Those included technologies like:
--- vanilla JS
--- nuxt.js / vue.js
--- next.js / react.js
--- astro / svelte, and
--- sveltekit
+- vanilla JS
+- nuxt.js / vue.js
+- next.js / react.js
+- astro / svelte, and
+- sveltekit
 
 Other technologies in use were:
--- [leaflet](https://leafletjs.com/)
--- [konva](https://konvajs.org/)
--- [scrollmagic](https://scrollmagic.io/)
+- [leaflet](https://leafletjs.com/)
+- [konva](https://konvajs.org/)
+- [scrollmagic](https://scrollmagic.io/)
 
 The objective was to select a tech stack on which to focus for further development. In fact, this project is still in progress and will continue its development in a forked repository.
 
@@ -30,13 +30,17 @@ The project showed here is in vanilla JS and CSS. It was done so for quick devel
 
 Some of the images that will be used in further developments are also shown.
 
+## Deployment
+
+Due to its simplicity and nature this project was desployed at gh-pages. Follow this link to get to the current available project: https://chingu-voyages.github.io/V55-tier3-team-39/
+
 ## Next Steps and Expected Developments
 
 As next steps, the plan is:
--- revise the use of some of the JS libraries
--- improving the design
--- translating the design and the code into the selected stack ([sveltekit](https://svelte.dev/docs/kit/introduction))
--- make use of a headless CMS to work part of the content; for that I would use [sanity.io](https://www.sanity.io/)
+- revise the use of some of the JS libraries
+- improving the design
+- translating the design and the code into the selected stack ([sveltekit](https://svelte.dev/docs/kit/introduction))
+- make use of a headless CMS to work part of the content; for that I would use [sanity.io](https://www.sanity.io/)
 
 ## Members
 
