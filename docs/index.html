@@ -49,26 +49,6 @@
       
       }
 
-/*   .parallax-container1{
-    /*  this is where the magic happens:  
-        background-attachment: fixed;
-
-        background-image: url(https://www.fossilguy.com/gallery/vert/dinosaur/tyrannosaurus/28767_AMNH.jpg);
-        background-position: center;
-        background-size: cover;
-        color: var(--color);
-        row-gap: 4rem;
-        /*filter: sepia(1);
-        text-align: center;
-        /*animation-name: titleFadeIn02;
-        animation-duration: 0.15s; /*0.05 ---- 10 step
-        animation-timing-function: steps(5, jump-both);
-        animation-direction: alternate;
-        animation-iteration-count: infinite;
-  }
-*/
-
-
 .buffer {
         width: 100%;
         height: 1vh;
@@ -182,6 +162,56 @@
         align-items: center;
       }
     }
+  .project-sections{
+    display:flex;
+    justify-content: space-between;
+    align-items: stretch;
+    padding: 2px 16px;
+    width: 100%;
+  }
+
+  .project-section{
+    /* Add shadows to create the "card" effect */
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    background-color: grey;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    transition: 0.3s;
+    width: 100%;
+    max-width: 450px;
+    height: 500px;
+    margin: 0px 7px;
+  }
+
+  .project-section.title {
+  color: grey;
+  font-size: 18px;
+}
+
+  /* On mouse-over, add a deeper shadow */
+  .project-section:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  }
+
+  .project-section a {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
+}
+
+.project-section a:hover {
+  opacity: 0.7;
+}
+
   </style>
 </head>
 <body>
@@ -189,14 +219,14 @@
   <section class="parallax parallax-container1">
   <!-- SECTION 1: Marsh & Cope Overview -->
       <video autoplay muted loop>
-        <source src="..\assets\videos\Recording 2025-05-23 230753.mp4" type="video/mp4">
+        <source src=".\assets\videos\Recording 2025-05-23 230753.mp4" type="video/mp4">
       </video>
    <div class="title">
       <h1>Race for Dinosaurs</h1>
     </div>
-    </section>
-    <section class="buffer"></section>
-    <section class="parallax parallax-container2">
+  </section>
+  <section class="buffer"></section>
+  <section class="parallax parallax-container2">
         <!---<div class="flexy">        </div>-->
 
     <section class="parallax marsh">
@@ -220,6 +250,32 @@
       <div class="portraits">
         <div class="portrait" style="background-image: url('cope.jpg');"></div>
       </div>
+    </div>
+  </section>
+  <section class="project-sections">
+    <div class="project-section">
+        <img src="./assets/img/section01.jpg" alt="map section" style="width:100%">
+        <h1>The Bones Wars in a Map</h1>
+        <p>Go to this page and scroll down for a history trip into the Bones Wars</p>
+        <a href="section01/">Go to the section</a>
+    </div>
+    <div class="project-section">
+        <img src="./assets/img/section02.jpg" alt="map section" style="width:100%">
+        <h1>Bones Wars Stats</h1>
+        <p>How resulted the Bones Wars in numbers?</p>
+        <a href="section02/">Go to the section</a>
+    </div>
+    <div class="project-section">
+        <img src="./assets/img/section03.jpg" alt="map section" style="width:100%">
+        <h1>Bones Wars Quiz</h1>
+        <p>Test your knowledge about the Bones Wars and win... a bone?</p>
+        <a href="section03/">Go to the section</a>
+    </div>
+    <div class="project-section">
+        <img src="./assets/img/section04.jpg" alt="map section" style="width:100%">
+        <h1>The Bones War Desk</h1>
+        <p>Click on the figures to know more about our characters.</p>
+        <a href="section04/">Go to the section</a>
     </div>
   </section>
 
