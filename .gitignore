@@ -1,0 +1,5 @@
+docs/references.md
+node_modules
+client/.nuxt
+client/.output
+client/.data
