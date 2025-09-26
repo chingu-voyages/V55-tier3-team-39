@@ -30,6 +30,10 @@ The project showed here is in vanilla JS and CSS. It was done so for quick devel
 
 Some of the images that will be used in further developments are also shown.
 
+## Deployment
+
+Due to its simplicity and nature this project was desployed at gh-pages. Follow this link to get to the current available project: https://chingu-voyages.github.io/V55-tier3-team-39/
+
 ## Next Steps and Expected Developments
 
 As next steps, the plan is:
